@@ -9,6 +9,7 @@ stuff/
 *.o.d
 *.a
 *.def
+.gitignore
 opencvsrc/
 .settings/
 .project
@@ -18,3 +19,7 @@ opencvsrc/
 .exe
 original/
 *.sikuli.robot/
+.metadata/
+API/.externalToolBuilders/
+API/maven-eclipse.xml
+

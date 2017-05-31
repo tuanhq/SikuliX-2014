@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import org.sikuli.basics.Debug;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
-
-import com.sun.crypto.provider.RSACipher;
+//
+//import com.sun.crypto.provider.RSACipher;
 
 public class SxArea extends Visual
 implements ComponentListener{
