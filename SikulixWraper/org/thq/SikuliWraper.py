@@ -16,3 +16,5 @@ class Person:
         
     def printName(self):
         print self.name    
+    def printAge(self):
+        print self.age
