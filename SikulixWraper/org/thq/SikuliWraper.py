@@ -18,5 +18,4 @@ class Person:
         print self.name    
     def printAge(self):
         print self.age
-    def printPerson(self):
-        print "Person:"+self.name + "is "+ self.age + "years old"
+    
