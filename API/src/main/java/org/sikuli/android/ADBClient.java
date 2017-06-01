@@ -64,6 +64,58 @@ public class ADBClient {
       Debug.log(3, "ADBClient: init: attached device: serial(%s)", serial);
     }
   }
+  
+  //TuNN6
+  private static void init(String serialID) {
+	    getConnection(true);
+	    if (jadb == null) {
+	      try {
+	        new AdbServerLauncher().launch();
+	        Debug.log(3, "ADBClient: ADBServer started");
+	        getConnection(false);
+	        if (jadb != null) {
+	          shouldStopServer = true;
+
+	        }
+	      } catch (Exception e) {
+	        //Cannot run program "adb": error=2, No such file or directory
+	        if (e.getMessage().startsWith("Cannot run program")) {
+	          isAdbAvailable = false;
+	          Debug.error("ADBClient: package adb not available. need to be installed");
+	        } else {
+	          Debug.error("ADBClient: ADBServer problem: %s", e.getMessage());
+	        }
+	      }
+	    }
+	    String serial = null;
+	    if (jadb != null) {
+	      List<JadbDevice> devices = null;
+	      try {
+	        devices = jadb.getDevices();
+	      } catch (Exception e) {
+	      }
+	      if (devices != null && devices.size() > 0) {
+	    	  boolean check = false;
+	    	  for(JadbDevice getdevice : devices){
+	    		  if(getdevice.getSerial() == serialID){
+	    			  device = getdevice;
+	    			  serial = serialID;
+	    			  check = true;
+	    		  }
+	    	  }
+	    	  if(!check){
+	    		 device = null;
+	  	        Debug.error("ADBClient: init: no devices attached");
+	    	  }
+	      } else {
+	        device = null;
+	        Debug.error("ADBClient: init: no devices attached");
+	      }
+	    }
+	    if (device != null) {
+	      Debug.log(3, "ADBClient: init: attached device: serial(%s)", serial);
+	    }
+	 }
 
   public static void reset() {
     device = null;
@@ -98,6 +150,12 @@ public class ADBClient {
   public static JadbDevice getDevice() {
     init();
     return device;
+  }
+  
+  //TuNN6
+  public static JadbDevice getDevice(String serialID) {
+	    init(serialID);
+	    return device;
   }
 
   //TODO: get device by id

@@ -74,6 +74,21 @@ public class ADBScreen extends Region implements EventObserver, IScreen {
       h = bounds.height;
     }
   }
+  
+  //TuNN6
+  public ADBScreen(String serialID) {
+	    super();
+	    setOtherScreen(this);
+
+	    device = ADBDevice.init(serialID);
+	    if (device != null) {
+	      robot = device.getRobot(this);
+	      robot.setAutoDelay(10);
+	      bounds = device.getBounds();
+	      w = bounds.width;
+	      h = bounds.height;
+	    }
+	  }
 
   public boolean isValid() {
     return null != device;

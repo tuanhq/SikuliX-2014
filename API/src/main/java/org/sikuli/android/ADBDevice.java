@@ -95,6 +95,46 @@ public class ADBDevice {
     }
     return adbDevice;
   }
+  
+  //TuNN6
+  public static ADBDevice init(String serialID) {
+	  // if (adbDevice == null) {
+      adbDevice = new ADBDevice();
+      adbDevice.device = ADBClient.getDevice(serialID);
+      if (adbDevice.device == null) {
+        adbDevice = null;
+      } else {
+        adbDevice.deviceProps = Arrays.asList(adbDevice.exec("getprop").split("\n"));
+        //[ro.build.version.release]: [6.0.1]
+        //[ro.product.brand]: [google]
+        //[ro.product.manufacturer]: [asus]
+        //[ro.product.model]: [Nexus 7]
+        //[ro.product.name]: [razor]
+        //[ro.serialno]: [094da986]
+        Pattern pProp = Pattern.compile("\\[(.*?)\\]:.*?\\[(.*)\\]");
+        Matcher mProp = null;
+        String val = "";
+        String key = "";
+        for (String prop : adbDevice.deviceProps) {
+          if (!prop.startsWith("[ro.")) continue;
+          mProp = pProp.matcher(prop);
+          if (mProp.find()) {
+            key = mProp.group(1);
+            if (key.contains("build.version.release")) {
+              val = mProp.group(2);
+              try {
+                adbDevice.deviceVersion = Integer.parseInt(val.split("\\.")[0]);
+                adbDevice.sDeviceVersion = val;
+              } catch (Exception e) {
+              }
+            }
+          }
+        }
+        log(lvl, "init: %s", adbDevice.toString());
+      }
+    //}
+    return adbDevice;
+	  }
 
   public static void reset() {
     adbDevice = null;
