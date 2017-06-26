@@ -1,0 +1,4 @@
+sendTapEvent=sendevent /dev/input/event1 3 53 XXX && sendevent /dev/input/event1 3 54 YYY && sendevent /dev/input/event1 1 330 1 && sendevent /dev/input/event1 0 0 0 && sendevent /dev/input/event1 1 330 0 && sendevent /dev/input/event1 0 0 0
+sendPressEvent=sendevent /dev/input/event1 3 53 XXX && sendevent /dev/input/event1 3 54 YYY && sendevent /dev/input/event1 1 330 1 && sendevent /dev/input/event1 0 0 0
+sendRelease=sendevent /dev/input/event1 1 330 0 && sendevent /dev/input/event1 0 0 0
+sendHardKey=sendevent /dev/input/event0 1 keyId 1 && sendevent /dev/input/event0 0 0 0 && sendevent /dev/input/event0 1 keyId 0 && sendevent /dev/input/event0 0 0 0

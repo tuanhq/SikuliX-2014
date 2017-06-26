@@ -229,26 +229,22 @@ public class HUDemo {
 	}
 	
 	public void doType(String text){
-		try{
-			adb.aEventTap(kb_t);
-			adb.aEventTap(kb_r);
-			adb.aEventTap(kb_a);
-			adb.aEventTap(kb_n);
-			
-			adb.aEventTap(kb_space);
-			
-			adb.aEventTap(kb_d);
-			adb.aEventTap(kb_u);
-			adb.aEventTap(kb_y);
-			
-			adb.aEventTap(kb_space);
-			
-			adb.aEventTap(kb_h);
-			adb.aEventTap(kb_u);
-			adb.aEventTap(kb_n);
-			adb.aEventTap(kb_g);
-		}catch(FindFailed e){
-			e.printStackTrace();
-		}
+		adb.aEventTap(kb_t);
+		adb.aEventTap(kb_r);
+		adb.aEventTap(kb_a);
+		adb.aEventTap(kb_n);
+		
+		adb.aEventTap(kb_space);
+		
+		adb.aEventTap(kb_d);
+		adb.aEventTap(kb_u);
+		adb.aEventTap(kb_y);
+		
+		adb.aEventTap(kb_space);
+		
+		adb.aEventTap(kb_h);
+		adb.aEventTap(kb_u);
+		adb.aEventTap(kb_n);
+		adb.aEventTap(kb_g);
 	}
 }

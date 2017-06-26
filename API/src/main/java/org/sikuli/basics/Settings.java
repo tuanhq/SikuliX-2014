@@ -40,6 +40,7 @@ public class Settings {
     public static boolean handlesMacBundles = true;
     public static boolean runningSetup = false;
     private static PreferencesUser prefs;
+    public static String tesseractLanguage = "eng";
 
     /**
      * location of folder Tessdata
@@ -504,4 +505,5 @@ public class Settings {
     public static String getTimestamp() {
         return (new Date()).getTime() + "";
     }
+    
 }

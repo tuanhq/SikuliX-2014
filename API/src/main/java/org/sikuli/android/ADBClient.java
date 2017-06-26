@@ -4,167 +4,177 @@
 
 package org.sikuli.android;
 
-
 import org.sikuli.basics.Debug;
 import se.vidstige.jadb.AdbServerLauncher;
 import se.vidstige.jadb.JadbConnection;
 import se.vidstige.jadb.JadbDevice;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
- * Created by tg44 on 2016. 06. 26..
- * Modified by RaiMan
+ * Created by tg44 on 2016. 06. 26.. Modified by RaiMan
  */
 public class ADBClient {
+	static {
+		devicesMap = new HashMap<String, JadbDevice>();
+	}
 
-  private static JadbConnection jadb = null;
-  private static boolean shouldStopServer = false;
-  private static JadbDevice device = null;
-  public static boolean isAdbAvailable = true;
+	private static JadbConnection jadb = null;
+	private static boolean shouldStopServer = false;
+	private static JadbDevice device = null;
+	private static Map<String, JadbDevice> devicesMap;
+	public static boolean isAdbAvailable = true;
 
-  private static void init() {
-    getConnection(true);
-    if (jadb == null) {
-      try {
-        new AdbServerLauncher().launch();
-        Debug.log(3, "ADBClient: ADBServer started");
-        getConnection(false);
-        if (jadb != null) {
-          shouldStopServer = true;
+	private static void init() {
+		getConnection(true);
+		if (jadb == null) {
+			try {
+				new AdbServerLauncher().launch();
+				Debug.log(3, "ADBClient: ADBServer started");
+				getConnection(false);
+				if (jadb != null) {
+					shouldStopServer = true;
 
-        }
-      } catch (Exception e) {
-        //Cannot run program "adb": error=2, No such file or directory
-        if (e.getMessage().startsWith("Cannot run program")) {
-          isAdbAvailable = false;
-          Debug.error("ADBClient: package adb not available. need to be installed");
-        } else {
-          Debug.error("ADBClient: ADBServer problem: %s", e.getMessage());
-        }
-      }
-    }
-    String serial = null;
-    if (jadb != null) {
-      List<JadbDevice> devices = null;
-      try {
-        devices = jadb.getDevices();
-      } catch (Exception e) {
-      }
-      if (devices != null && devices.size() > 0) {
-        device = devices.get(0);
-        serial = device.getSerial();
-      } else {
-        device = null;
-        Debug.error("ADBClient: init: no devices attached");
-      }
-    }
-    if (device != null) {
-      Debug.log(3, "ADBClient: init: attached device: serial(%s)", serial);
-    }
-  }
-  
-  //TuNN6
-  private static void init(String serialID) {
-	    getConnection(true);
-	    if (jadb == null) {
-	      try {
-	        new AdbServerLauncher().launch();
-	        Debug.log(3, "ADBClient: ADBServer started");
-	        getConnection(false);
-	        if (jadb != null) {
-	          shouldStopServer = true;
+				}
+			} catch (Exception e) {
+				// Cannot run program "adb": error=2, No such file or directory
+				if (e.getMessage().startsWith("Cannot run program")) {
+					isAdbAvailable = false;
+					Debug.error("ADBClient: package adb not available. need to be installed");
+				} else {
+					Debug.error("ADBClient: ADBServer problem: %s", e.getMessage());
+				}
+			}
+		}
+		String serial = null;
+		if (jadb != null) {
+			List<JadbDevice> devices = null;
+			try {
+				devices = jadb.getDevices();
+			} catch (Exception e) {
+			}
+			if (devices != null && devices.size() > 0) {
+				device = devices.get(0);
+				serial = device.getSerial();
+			} else {
+				device = null;
+				Debug.error("ADBClient: init: no devices attached");
+			}
+		}
+		if (device != null) {
+			Debug.log(3, "ADBClient: init: attached device: serial(%s)", serial);
+		}
+	}
 
-	        }
-	      } catch (Exception e) {
-	        //Cannot run program "adb": error=2, No such file or directory
-	        if (e.getMessage().startsWith("Cannot run program")) {
-	          isAdbAvailable = false;
-	          Debug.error("ADBClient: package adb not available. need to be installed");
-	        } else {
-	          Debug.error("ADBClient: ADBServer problem: %s", e.getMessage());
-	        }
-	      }
-	    }
-	    String serial = null;
-	    if (jadb != null) {
-	      List<JadbDevice> devices = null;
-	      try {
-	        devices = jadb.getDevices();
-	      } catch (Exception e) {
-	      }
-	      if (devices != null && devices.size() > 0) {
-	    	  boolean check = false;
-	    	  for(JadbDevice getdevice : devices){
-	    		  if(getdevice.getSerial() == serialID){
-	    			  device = getdevice;
-	    			  serial = serialID;
-	    			  check = true;
-	    		  }
-	    	  }
-	    	  if(!check){
-	    		 device = null;
-	  	        Debug.error("ADBClient: init: no devices attached");
-	    	  }
-	      } else {
-	        device = null;
-	        Debug.error("ADBClient: init: no devices attached");
-	      }
-	    }
-	    if (device != null) {
-	      Debug.log(3, "ADBClient: init: attached device: serial(%s)", serial);
-	    }
-	 }
+	private static void init(String serialID) {
+		getConnection(true);
+		if (jadb == null) {
+			try {
+				new AdbServerLauncher().launch();
+				Debug.log(3, "ADBClient: ADBServer started");
+				getConnection(false);
+				if (jadb != null) {
+					shouldStopServer = true;
 
-  public static void reset() {
-    device = null;
-    jadb = null;
-    Process p = null;
-    if (!shouldStopServer) {
-      return;
-    }
-    try {
-      p = Runtime.getRuntime().exec(new String[] {"adb", "kill-server"});
-      p.waitFor();
-    } catch (Exception e) {
-      Debug.error("ADBClient: reset: kill-server did not work");
-    }
-  }
+				}
+			} catch (Exception e) {
+				// Cannot run program "adb": error=2, No such file or directory
+				if (e.getMessage().startsWith("Cannot run program")) {
+					isAdbAvailable = false;
+					Debug.error("ADBClient: package adb not available. need to be installed");
+				} else {
+					Debug.error("ADBClient: ADBServer problem: %s", e.getMessage());
+				}
+			}
+		}
+		String serial = null;
+		if (jadb != null) {
+			List<JadbDevice> devices = null;
+			try {
+				devices = jadb.getDevices();
+			} catch (Exception e) {
+			}
+			if (devices != null && devices.size() > 0) {
+				for (JadbDevice getdevice : devices) {
+					devicesMap.put(getdevice.getSerial(), getdevice);
+				}
+				device = devicesMap.get(serialID);
 
-  private static void getConnection(boolean quiet) {
-    if (jadb == null) {
-      try {
-        jadb = new JadbConnection();
-        jadb.getHostVersion();
-        Debug.log(3, "ADBClient: ADBServer connection established");
-      } catch (Exception e) {
-        if (!quiet) {
-          Debug.error("ADBClient: ADBServer connection not possible: %s", e.getMessage());
-        }
-        jadb = null;
-      }
-    }
-  }
+			} else {
+				device = null;
+				Debug.error("ADBClient: init: no devices attached");
+			}
+		}
+		if (device != null) {
+			Debug.log(3, "ADBClient: init: attached device: serial(%s)", serial);
+		}
+	}
 
-  public static JadbDevice getDevice() {
-    init();
-    return device;
-  }
-  
-  //TuNN6
-  public static JadbDevice getDevice(String serialID) {
-	    init(serialID);
-	    return device;
-  }
+	public static void reset() {
+		devicesMap = new HashMap<>();
+		device = null;
+		jadb = null;
+		Process p = null;
+		if (!shouldStopServer) {
+			return;
+		}
+		try {
+			p = Runtime.getRuntime().exec(new String[] { "adb", "kill-server" });
+			p.waitFor();
+		} catch (Exception e) {
+			Debug.error("ADBClient: reset: kill-server did not work");
+		}
+	}
 
-  //TODO: get device by id
+	private static void getConnection(boolean quiet) {
+		if (jadb == null) {
+			try {
+				jadb = new JadbConnection();
+				jadb.getHostVersion();
+				Debug.log(3, "ADBClient: ADBServer connection established");
+			} catch (Exception e) {
+				if (!quiet) {
+					Debug.error("ADBClient: ADBServer connection not possible: %s", e.getMessage());
+				}
+				jadb = null;
+			}
+		}
+	}
 
-  public boolean isValid() {
-    return jadb != null;
-  }
+	public static JadbDevice getDevice() {
+		init();
+		return device;
+	}
 
-  public boolean hasDevices() {
-    return device != null;
-  }
+	public static JadbDevice getDevice(String serialID) {
+		JadbDevice _device = devicesMap.get(serialID);
+		if (_device != null) {
+			return _device;
+		} else {
+			init(serialID);
+			return device;
+		}
+
+	}
+
+	// TODO: get device by id
+
+	public boolean isValid() {
+		return jadb != null;
+	}
+
+	public boolean hasDevices() {
+		return device != null;
+	}
+	
+	public boolean isValid(String serialID) {
+		return devicesMap.get(serialID) != null;
+	}
+
+	public boolean hasDevices(String serialID) {
+		return devicesMap.get(serialID) != null;
+	}
 }

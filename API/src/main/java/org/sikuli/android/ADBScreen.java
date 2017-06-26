@@ -75,11 +75,10 @@ public class ADBScreen extends Region implements EventObserver, IScreen {
     }
   }
   
-  //TuNN6
+  
   public ADBScreen(String serialID) {
 	    super();
 	    setOtherScreen(this);
-
 	    device = ADBDevice.init(serialID);
 	    if (device != null) {
 	      robot = device.getRobot(this);
@@ -125,13 +124,25 @@ public class ADBScreen extends Region implements EventObserver, IScreen {
       }
     }
   }
-
+  
   public String exec(String command, String... args) {
     if (device == null) {
       return null;
     }
     return device.exec(command, args);
   }
+  
+  //execute tap, swipe, press, release using event in android
+  public String exec1(String command, String[] args) {
+	    if (device == null) {
+	      return null;
+	    }
+	    return device.exec(command, args);
+	}
+  
+ 
+  
+  //end 
 
   //-----------------------------Overrides
   @Override
@@ -266,5 +277,11 @@ public class ADBScreen extends Region implements EventObserver, IScreen {
 
   public Location newLocation(int _x, int _y) {
     return new Location(_x, _y).setOtherScreen(this);
+  }
+  
+  //tmp metho
+  
+  public<PFRML> void aEventTap(PFRML target){
+	  
   }
 }

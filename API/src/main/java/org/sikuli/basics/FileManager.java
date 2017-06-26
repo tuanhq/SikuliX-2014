@@ -565,6 +565,17 @@ public class FileManager {
     }
     return fImage.getAbsolutePath();
   }
+  //return only file name
+  public static String saveTimedImageAnReturnFileName(BufferedImage img, String path, String name) {
+	    RunTime.pause(0.01f);
+	    File fImage = new File(path, String.format("%s-%d.png", name, new Date().getTime()));
+	    try {
+	      ImageIO.write(img, "png", fImage);
+	    } catch (Exception ex) {
+	      return "";
+	    }
+	    return fImage.getName();
+	  }
 
   public static boolean unzip(String inpZip, String target) {
     return unzip(new File(inpZip), new File(target));

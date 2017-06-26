@@ -27,6 +27,7 @@ public class Test {
 			Phone phone = new Phone(adb_phone);
 			HUDemo hu = new HUDemo(adb_hu);
 			// enable bluetooth on phone
+			
 			if(!phone.connectBT()) return;
 			
 			// connect to phone using HU though bluetooth

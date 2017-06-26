@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Jython 2.7.0 on java1.8.0_111)" generated="20170626 18:27:24.651">
+<suite source="C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation" name="HUAutomation" id="s1">
+<suite source="C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\ChangeSettingsTS.robot" name="ChangeSettingsTS" id="s1-s1">
+<test name="EJECT" id="s1-s1-t1">
+<kw library="SikuliWraper" name="Exist Image">
+<arguments>
+<arg>0123456789ABCDEF</arg>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation\\Images\\Settings\\IncAngleDis.png</arg>
+</arguments>
+<assign>
+<var>${dvd eject4}</var>
+</assign>
+<msg level="INFO" timestamp="20170626 18:27:35.403">${dvd eject4} = False</msg>
+<status endtime="20170626 18:27:35.410" starttime="20170626 18:27:28.620" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${dvd eject4}</arg>
+<arg>Tap IncAngleDis</arg>
+</arguments>
+<status endtime="20170626 18:27:35.469" starttime="20170626 18:27:35.430" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>${dvd eject4}</arg>
+<arg>Tap DecAngleDisable</arg>
+</arguments>
+<kw name="Tap DecAngleDisable">
+<kw library="SikuliWraper" name="Press Hard Key">
+<arguments>
+<arg>0123456789ABCDEF</arg>
+<arg>13</arg>
+</arguments>
+<status endtime="20170626 18:27:37.928" starttime="20170626 18:27:35.562" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170626 18:27:40.949">Slept 3 seconds</msg>
+<status endtime="20170626 18:27:40.957" starttime="20170626 18:27:37.937" status="PASS"></status>
+</kw>
+<kw library="SikuliWraper" name="Tap">
+<arguments>
+<arg>0123456789ABCDEF</arg>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation\\Images\\Settings\\IncAngleEnable\\IncAngleEnable.png</arg>
+</arguments>
+<status endtime="20170626 18:27:46.829" starttime="20170626 18:27:40.966" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170626 18:27:47.881">Slept 1 second</msg>
+<status endtime="20170626 18:27:47.889" starttime="20170626 18:27:46.867" status="PASS"></status>
+</kw>
+<kw library="SikuliWraper" name="Tap">
+<arguments>
+<arg>0123456789ABCDEF</arg>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation\\Images\\Settings\\DecAngleEnable.png</arg>
+</arguments>
+<status endtime="20170626 18:27:53.913" starttime="20170626 18:27:47.900" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170626 18:27:54.961">Slept 1 second</msg>
+<status endtime="20170626 18:27:54.967" starttime="20170626 18:27:53.944" status="PASS"></status>
+</kw>
+<kw library="SikuliWraper" name="Tap">
+<arguments>
+<arg>0123456789ABCDEF</arg>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation\\Images\\Settings\\IncAngleEnable\\IncAngleEnable.png</arg>
+</arguments>
+<status endtime="20170626 18:28:00.687" starttime="20170626 18:27:54.976" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170626 18:28:01.745">Slept 1 second</msg>
+<status endtime="20170626 18:28:01.754" starttime="20170626 18:28:00.733" status="PASS"></status>
+</kw>
+<kw library="SikuliWraper" name="Tap">
+<arguments>
+<arg>0123456789ABCDEF</arg>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation\\Images\\Settings\\DecAngleEnable.png</arg>
+</arguments>
+<status endtime="20170626 18:28:07.932" starttime="20170626 18:28:01.763" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170626 18:28:10.958">Slept 3 seconds</msg>
+<status endtime="20170626 18:28:10.976" starttime="20170626 18:28:07.942" status="PASS"></status>
+</kw>
+<kw library="SikuliWraper" name="Press Hard Key">
+<arguments>
+<arg>0123456789ABCDEF</arg>
+<arg>13</arg>
+</arguments>
+<status endtime="20170626 18:28:13.162" starttime="20170626 18:28:11.017" status="PASS"></status>
+</kw>
+<status endtime="20170626 18:28:13.173" starttime="20170626 18:27:35.547" status="PASS"></status>
+</kw>
+<status endtime="20170626 18:28:13.187" starttime="20170626 18:27:35.515" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20170626 18:28:13.217" starttime="20170626 18:27:28.594" status="PASS"></status>
+</test>
+<status endtime="20170626 18:28:13.249" starttime="20170626 18:27:26.936" status="PASS"></status>
+</suite>
+<status endtime="20170626 18:28:13.301" starttime="20170626 18:27:25.981" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" name="HUAutomation" id="s1">HUAutomation</stat>
+<stat pass="1" fail="0" name="ChangeSettingsTS" id="s1-s1">HUAutomation.ChangeSettingsTS</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
