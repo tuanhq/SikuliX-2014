@@ -56,8 +56,10 @@ public class ADBTest {
 		 Settings.OcrTextSearch = true;
 		// Screen scr = new Screen();
 		 ADBScreen adbS = new ADBScreen("0123456789ABCDEF");
-		 adbS.capture().save("C:\\tmp", "111111");
-		 Match m1 = adbS.getMatchByText("Clock",1,TessPageIteratorLevel.RIL_WORD);
+		 adbS.capture().save("C:\\tmp", "ANDROI");
+		 adbS.aTapWord("Connection");
+		 
+		// Match m1 = adbS.getMatchByText("Clock",1,TessPageIteratorLevel.RIL_WORD);
 		// m1.saveScreenCapture("C:\\tmp", "HILLO");
 //		 Region m2 = m1.right();
 //		 m2.saveScreenCapture("C:\\tmp", "HELLO");

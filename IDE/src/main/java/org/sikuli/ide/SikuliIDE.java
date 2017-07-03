@@ -81,7 +81,7 @@ import org.jdesktop.swingx.JXTaskPane;
 import org.jdesktop.swingx.JXTaskPaneContainer;
 import org.sikuli.android.ADBClient;
 import org.sikuli.android.ADBScreen;
-import org.sikuli.android.ADBTest;
+//import org.sikuli.android.ADBTest;
 import org.sikuli.basics.Debug;
 import org.sikuli.basics.FileManager;
 import org.sikuli.basics.HotkeyEvent;
@@ -1791,7 +1791,7 @@ public class SikuliIDE extends JFrame implements InvocationHandler {
   }
 
   private void androidSupportTest(ADBScreen aScr) {
-    ADBTest.ideTest(aScr);
+//    ADBTest.ideTest(aScr);
     SikuliIDE.showIDE();
   }
   //</editor-fold>

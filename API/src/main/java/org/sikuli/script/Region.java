@@ -5035,6 +5035,22 @@ public class Region {
 			}
 		}
 	}
+	public <PFRML> void aTapEventExact(PFRML target) throws FindFailed {
+		try {
+			Settings.MinSimilarity = 0.99f;
+			if (isAndroid() && adbDevice != null) {
+				Location loc = getLocationFromTarget(target);
+				if (loc != null) {
+					eventTap(loc.x, loc.y);
+					RunTime.pause(adbScreen.waitAfterAction);
+				}
+			}
+		} finally {
+			// TODO: handle finally clause
+			Settings.MinSimilarity = 0.7f;
+		}
+		
+	}
 
 	// execute using event in android tuanhq
 
@@ -5204,11 +5220,19 @@ public class Region {
 	public <PFRML> void aSwipeRightFrom(PFRML from) throws FindFailed {
 		aSwipeFrom(from, Constant.Directions.RIGHT);
 	}
-
+	
+	public void aSwipeDownFromTop() throws FindFailed {
+		aSwipeFrom(new Location(x/2,0),Constant.Directions.DOWN);
+	}
 	public <PFRML> void aSwipeFrom(PFRML from, Constant.Directions direct) throws FindFailed {
 		if (isAndroid() && adbDevice != null) {
-
-			Location locFrom = getLocationFromTarget(from);
+			Location locFrom = null;
+			if(from instanceof Location) {
+				locFrom = (Location)from;
+			}else {
+				locFrom = getLocationFromTarget(from);
+			}
+			 
 
 			if (locFrom != null) {
 				int swipeStepX, swipeSTepY;
@@ -5380,7 +5404,7 @@ public class Region {
 		List<Word> listWord = tesseractInstance.getWords(bi, pageIteratorLevel);
 		int current = 1;
 		for (Word word : listWord) {
-//			System.err.println(word.getText());
+			System.err.println(word.getText());
 			if (word.getText() != null && word.getText().toLowerCase().contains(text.toLowerCase())
 					&& word.getConfidence() >= Settings.MinSimilarity)
 				 if (current >= order) {
@@ -5427,13 +5451,21 @@ public class Region {
 
 	
 	}
-	
+	public void aTapTextEvent(String text) {
+		aTapText(text,1,TapType.EVENT_TAP);
+	}
+	public void aTapWordEvent(String text) {
+		aTapWord(text,1,TapType.EVENT_TAP);
+	}
 	
 	
 	public void aTapText(String text) {
-		aTapText(text,1);
+		aTapText(text,1,TapType.SHELL_TAP);
 	}
-	public void aTapText(String text,int order) {
+	public void aTapWord(String text) {
+		aTapWord(text,1,TapType.SHELL_TAP);
+	}
+	public void aTapText(String text,int order,TapType tapType) {
 
 		if (isAndroid() && adbDevice != null) {
 			Word word = findTextLine(text,order);
@@ -5441,13 +5473,42 @@ public class Region {
 				Rectangle rec = word.getBoundingBox();
 				double x = rec.getX() + rec.getWidth() / 2;
 				double y = rec.getY() + rec.getHeight() / 2;
-				adbDevice.tap((int) x, (int) y);
+				if(TapType.SHELL_TAP.equals(tapType)) {
+					adbDevice.tap((int) x, (int) y);
+				}else if(TapType.EVENT_TAP.equals(tapType)) {
+					eventTap((int) x, (int) y);
+				}
+				
 				RunTime.pause(adbScreen.waitAfterAction);
 
 			}
 
 		}
 
+	}
+	
+	public void aTapWord(String text,int order,TapType tapType) {
+
+		if (isAndroid() && adbDevice != null) {
+			Word word = findWordLine(text,order);
+			if (word != null) {
+				Rectangle rec = word.getBoundingBox();
+				double x = rec.getX() + rec.getWidth() / 2;
+				double y = rec.getY() + rec.getHeight() / 2;
+				if(TapType.SHELL_TAP.equals(tapType)) {
+					adbDevice.tap((int) x, (int) y);
+				}else if(TapType.EVENT_TAP.equals(tapType)) {
+					eventTap((int) x, (int) y);
+				}
+				RunTime.pause(adbScreen.waitAfterAction);
+
+			}
+
+		}
+
+	}
+	public enum TapType{
+		EVENT_TAP, SHELL_TAP
 	}
 
 }

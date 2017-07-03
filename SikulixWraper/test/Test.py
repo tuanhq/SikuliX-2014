@@ -9,9 +9,14 @@ from org.sikuli.script import RunTime
 from org.sikuli.android import ADBScreen
 from org.sikuli.basics import Settings
 from org.thq.SikuliWraper import LocationPy
+from org.thq import SikuliLibrary
 
 RunTime.loadLibrary("libopencv_java248")
 
+
+
+a  = SikuliLibrary.SikuliLibrary(111)
+a.devicePrint()
 
 #tap_on_key("4b133ee0e814924e","HOME")
 
@@ -20,9 +25,9 @@ RunTime.loadLibrary("libopencv_java248")
 #SikuliWraper.tap("4b133ee0e814924e", "C:\\tmp\\menu.jpg")
 #print SikuliWraper.existImage("4b133ee0e814924e", "C:\\tmp\\menu.jpg")
 
-Settings.OcrTextRead = True
-Settings.OcrTextSearch = True
-adbS = ADBScreen("0123456789ABCDEF")
+#Settings.OcrTextRead = True
+#Settings.OcrTextSearch = True
+#adbS = ADBScreen("0123456789ABCDEF")
 # adbS.capture().save("C:\\tmp","pionerr")
 # math = adbS.find("C:\\tmp\\firmware.jpg")
 # if math != None:
@@ -38,4 +43,4 @@ adbS = ADBScreen("0123456789ABCDEF")
 #print str(loc.x) +":" +str(loc.y)
 #adbS.aTap(loc.x, loc.y)
 #SikuliWraper.tap_location("0123456789ABCDEF", loc.x, loc.y)
-SikuliWraper.a_swipe_down_from("0123456789ABCDEF", "C:\\Users\\tuanhq\\projects\\java\SikuliX-2014\\HUAutomation\\Images\\Settings\\Scroolbar.png")
+#SikuliWraper.a_swipe_down_from("0123456789ABCDEF", "C:\\Users\\tuanhq\\projects\\java\SikuliX-2014\\HUAutomation\\Images\\Settings\\Scroolbar.png")
