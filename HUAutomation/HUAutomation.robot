@@ -3,13 +3,15 @@ Library    OperatingSystem
 Library    DateTime
 Library    Libs.SikuliWraper    4d000b1448084069    WITH NAME    AndroidMB
 Library    Libs.SikuliWraper    0123456789ABCDEF    WITH NAME    HU
+Library    Dialogs    
 
 *** Variables ***   
 ${AndroidMB}    4d000b1448084069
 ${HU}    0123456789ABCDEF
 ${BlueToothName}    Galaxy
 ${SongName}    Ngo Thuy Mien
-${dest address}    Dinh Tien Hoang Hanoi
+${dest address}    Truc Bach Hanoi
+${number call}    0985633469
 *** Test Cases ***
 Change Setting
     ${AV image} =    HU.Exist Image    ${CURDIR}/Images/Settings/AVAppIcon.png
@@ -102,9 +104,11 @@ Call Via Bluetooth
 	HU.Tap    ${CURDIR}/Images/Phone/HUKeyPadCall.png
 	Sleep	8s
 	HU.Tap    ${CURDIR}/Images/Phone/EndCall.png
-Android Auto
-    Press Hardkey Home
-    Sleep    1s
+Android Auto Listen To Music
+    Execute Manual Step    Please conect Mobile to HU And Confirm that Connection is OK    
+    ${AV image} =    HU.Exist Image    ${CURDIR}/Images/Settings/AVAppIcon.png
+    Run Keyword Unless    ${AV image}    Press Hardkey Home
+    Run Keyword Unless    ${AV image}    Sleep    1s
     HU.Tap    ${CURDIR}/Images/Settings/AndroidAutoIC.png
     Sleep    1s
     HU.A Tap Event    ${CURDIR}/Images/Phone/AndroidAutoHomeIcon/AndroidAutoHomeIcon.png    
@@ -117,7 +121,7 @@ Android Auto
     HU.Tap Text Event    Recent activity    
     Sleep    1s
     HU.Tap Text Event    ${SongName}
-    
+    Sleep    2s
     ${image exists} =    HU.Exist Image Exact    ${CURDIR}/Images/Phone/PlayBTN.png
     Log    ${image exists} 
     Run Keyword If    ${image exists}    HU.A Tap Event    ${CURDIR}/Images/Phone/PlayBTN.png
@@ -130,9 +134,10 @@ Android Auto
     HU.A Tap Event    ${CURDIR}/Images/Phone/PrevButton.png
     Sleep    10s
     HU.A Tap Event    ${CURDIR}/Images/Phone/PrevButton.png
-Android Auto 2
-    Press Hardkey Home
-    Sleep    1s
+Android Auto Navi
+    ${AV image} =    HU.Exist Image    ${CURDIR}/Images/Settings/AVAppIcon.png
+    Run Keyword Unless    ${AV image}    Press Hardkey Home
+    Run Keyword Unless    ${AV image}    Sleep    1s
     HU.Tap    ${CURDIR}/Images/Settings/AndroidAutoIC.png
     Sleep    1s
     HU.A Tap Event    ${CURDIR}/Images/Phone/AndroidAutoHomeIcon/AndroidAutoHomeIcon.png 
@@ -153,7 +158,31 @@ Android Auto 2
     \    Run Keyword Unless    ${image exist}    Exit For Loop
     HU.A Tap Event Exact    ${CURDIR}/Images/Phone/Recenter.png
     HU.A Tap Event Exact    ${CURDIR}/Images/Phone/Recenter.png
-    HU.A Tap Event Exact    ${CURDIR}/Images/Phone/CloseGGMap.png   
+    HU.A Tap Event Exact    ${CURDIR}/Images/Phone/CloseGGMap.png
+Android Auto Call
+    ${AV image} =    HU.Exist Image    ${CURDIR}/Images/Settings/AVAppIcon.png
+    Run Keyword Unless    ${AV image}    Press Hardkey Home
+    Run Keyword Unless    ${AV image}    Sleep    1s
+    HU.Tap    ${CURDIR}/Images/Settings/AndroidAutoIC.png
+    Sleep    1s
+    HU.A Tap Event    ${CURDIR}/Images/Phone/AndroidAutoHomeIcon/AndroidAutoHomeIcon.png 
+    Sleep    1s
+    HU.A Tap Event    ${CURDIR}/Images/Phone/AndroidAutoCallIcon.png
+    Sleep    1s
+    HU.Tap Word Event    Phone
+    Sleep    1s
+    HU.Tap Word Event    number
+    Sleep    1s
+    HU.Long Press Target    ${CURDIR}/Images/Phone/AndroidAutoKeyPad/KeyDel.png    2000
+    Sleep    1s
+    HU.Type Number Call    ${number call}    ${CURDIR}/Images/Phone/AndroidAutoKeyPad
+    Sleep    1s
+    HU.A Tap Event    ${CURDIR}/Images/Phone/AndroidAutoKeyPad/KeyCall.png  
+    Sleep    5s
+    HU.A Tap Event    ${CURDIR}/Images/Phone/AndroidAutoKeyPad/KeyEndCall.png      
+    
+    
+       
              
             
 *** Keyword ***

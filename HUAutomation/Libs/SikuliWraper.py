@@ -157,12 +157,24 @@ class SikuliWraper(object):
         self.adbScreen.eventLongPress(target, int(miliseconds))
         
     def type_text_search(self, str_text, pathImage):
-        for char1 in str_text:
-            print pathImage + '/Key' + char1.upper() + '.png'
+        for char1 in str_text:            
             if(char1 == ' '):                
                 self.adbScreen.aTapEvent(pathImage + '/KeySpace.png')
             else:
-                self.adbScreen.aTapEventExact(pathImage + '/Key' + char1.upper() + '.png')             
+                self.adbScreen.aTapEventExact(pathImage + '/Key' + char1.upper() + '.png')
+    def type_number_call(self, call_number, pathImage):
+        patternNumber = "012345689"
+        for char1 in call_number:        
+            if(char1 in patternNumber):                
+                self.adbScreen.aTapEvent(pathImage + '/Key'+char1+'.png')
+            elif(char1 == '#'):
+                self.adbScreen.aTapEventExact(pathImage + '/KeySharp.png') 
+            elif(char1 == '*'):
+                self.adbScreen.aTapEventExact(pathImage + '/KeyStar.png') 
+            else:
+                continue
+                                        
+                
 class LocationPy:
     def __init__(self, x, y):
         self.x = x
