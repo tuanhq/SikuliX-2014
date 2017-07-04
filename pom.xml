@@ -89,7 +89,7 @@
     <module>IDE</module>
     <module>SetupIDE</module>
     <module>Setup</module>
-	<module>tess4j</module>
+	<module>LibOCR</module>
 	
   </modules>
 
