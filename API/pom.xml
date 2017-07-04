@@ -147,10 +147,8 @@
 					<exclude>Settings/*</exclude>
 				</excludes>
 			</resource>
-			<resource>
-				<directory>
-          ../JRubyGem/lib/sikulix
-        </directory>
+			<resource>			
+				<directory>${project.parent.basedir}/JRubyGem/lib/sikulix</directory>
 				<includes>
 					<include>
             sikulix*
