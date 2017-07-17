@@ -53,12 +53,12 @@ def rewrite_pydev_project_file():
     
     #rewrite pydev proecjt file
     get_info()
-    tree2 = et.parse("Copy.pydevproject")
+    tree2 = et.parse(".pydevproject")
     root2 = tree2.getroot()    
     for cp in root2.iter("path"):
         cp.text = cp.text.replace(org_repos,maven_repository) 
         
-    tree2.write(".pydevproject1")
+    tree2.write(".pydevproject")
     
 
 def export_lib():
