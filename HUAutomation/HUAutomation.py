@@ -39,12 +39,12 @@ def rewrite_red_file():
     global set_file
     global org_repos
     get_info()
-    tree = et.parse('red2.xml')
+    tree = et.parse('red.xml')
     root = tree.getroot()
     for cp in root.iter("classpath"):
         for path in cp.findall("path"):
             path.set("location",path.get("location").replace(org_repos,maven_repository) )
-    tree.write("red4.xml")              
+    tree.write("red.xml")              
 
 def rewrite_pydev_project_file():
     global maven_repository
