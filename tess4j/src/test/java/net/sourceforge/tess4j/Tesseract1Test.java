@@ -94,6 +94,7 @@ public class Tesseract1Test {
      *
      * @throws java.lang.Exception
      */
+    @Ignore
     @Test
     public void testDoOCR_UNLV_Zone_File() throws Exception {
         logger.info("doOCR on a PNG image with UNLV zone file .uzn");
@@ -132,6 +133,7 @@ public class Tesseract1Test {
      *
      * @throws Exception while processing image.
      */
+    @Ignore
     @Test
     public void testDoOCR_File_Rectangle() throws Exception {
         logger.info("doOCR on a BMP image with bounding rectangle");
@@ -148,6 +150,7 @@ public class Tesseract1Test {
      *
      * @throws Exception while processing image.
      */
+    @Ignore
     @Test
     public void testDoOCR_List_Rectangle() throws Exception {
         logger.info("doOCR on a PDF document");
@@ -164,6 +167,7 @@ public class Tesseract1Test {
      *
      * @throws Exception while processing image.
      */
+    @Ignore
     @Test
     public void testDoOCR_BufferedImage() throws Exception {
         logger.info("doOCR on a buffered image of a PNG");
@@ -180,6 +184,7 @@ public class Tesseract1Test {
      *
      * @throws Exception while processing image.
      */
+    @Ignore
     @Test
     public void testDoOCR_SkewedImage() throws Exception {
         logger.info("doOCR on a skewed PNG image");
@@ -202,6 +207,7 @@ public class Tesseract1Test {
      *
      * @throws java.lang.Exception
      */
+    @Ignore
     @Test
     public void testCreateDocuments() throws Exception {
         logger.info("createDocuments for an image");
@@ -219,6 +225,7 @@ public class Tesseract1Test {
      *
      * @throws java.lang.Exception
      */
+    @Ignore
     @Test
     public void testGetWords() throws Exception {
         logger.info("getWords");
@@ -251,6 +258,7 @@ public class Tesseract1Test {
      * 
      * @throws java.lang.Exception
      */
+    @Ignore
     @Test
     public void testGetSegmentedRegions() throws Exception {
         logger.info("getSegmentedRegions at given TessPageIteratorLevel");

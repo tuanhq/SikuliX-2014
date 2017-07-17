@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.2 (Jython 2.7.0 on java1.8.0_111)" generated="20170704 11:24:51.715">
-<suite source="C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation" name="HUAutomation" id="s1">
-<suite source="C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\HUAutomation.robot" name="HUAutomation" id="s1-s1">
-<test name="Change Setting" id="s1-s1-t1">
+<robot generator="Robot 3.0.2 (Jython 2.7.0 on java1.8.0_111)" generated="20170717 15:11:57.026">
+<suite source="C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\HUAutomation.robot" name="HUAutomation" id="s1">
+<test name="Change Setting" id="s1-t1">
 <kw library="HU" name="Exist Image">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/AVAppIcon.png</arg>
@@ -10,8 +9,8 @@
 <assign>
 <var>${AV image}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:24:58.637">${AV image} = False</msg>
-<status endtime="20170704 11:24:58.668" starttime="20170704 11:24:55.099" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:11.773">${AV image} = False</msg>
+<status endtime="20170717 15:12:11.775" starttime="20170717 15:12:08.556" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -21,7 +20,7 @@
 <arg>Tap AV</arg>
 <arg>Tap SouceOff</arg>
 </arguments>
-<status endtime="20170704 11:24:58.729" starttime="20170704 11:24:58.705" status="PASS"></status>
+<status endtime="20170717 15:12:11.784" starttime="20170717 15:12:11.778" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -44,9 +43,9 @@
 <arguments>
 <arg>14</arg>
 </arguments>
-<status endtime="20170704 11:24:59.781" starttime="20170704 11:24:58.770" status="PASS"></status>
+<status endtime="20170717 15:12:12.814" starttime="20170717 15:12:11.802" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:24:59.785" starttime="20170704 11:24:58.765" status="PASS"></status>
+<status endtime="20170717 15:12:12.815" starttime="20170717 15:12:11.798" status="PASS"></status>
 </kw>
 <kw name="Tap AV">
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
@@ -61,11 +60,11 @@
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/AVAppIcon.png</arg>
 </arguments>
-<status endtime="20170704 11:25:02.278" starttime="20170704 11:24:59.802" status="PASS"></status>
+<status endtime="20170717 15:12:15.399" starttime="20170717 15:12:12.824" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:02.282" starttime="20170704 11:24:59.793" status="PASS"></status>
+<status endtime="20170717 15:12:15.400" starttime="20170717 15:12:12.819" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:02.286" starttime="20170704 11:24:59.789" status="PASS"></status>
+<status endtime="20170717 15:12:15.403" starttime="20170717 15:12:12.817" status="PASS"></status>
 </kw>
 <kw name="Tap SouceOff">
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
@@ -80,21 +79,21 @@
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/SourceOffICon</arg>
 </arguments>
-<status endtime="20170704 11:25:07.923" starttime="20170704 11:25:02.337" status="PASS"></status>
+<status endtime="20170717 15:12:19.335" starttime="20170717 15:12:15.414" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:07.929" starttime="20170704 11:25:02.308" status="PASS"></status>
+<status endtime="20170717 15:12:19.336" starttime="20170717 15:12:15.408" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:07.933" starttime="20170704 11:25:02.293" status="PASS"></status>
+<status endtime="20170717 15:12:19.339" starttime="20170717 15:12:15.405" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:07.940" starttime="20170704 11:24:58.753" status="PASS"></status>
+<status endtime="20170717 15:12:19.340" starttime="20170717 15:12:11.793" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:07.945" starttime="20170704 11:24:58.735" status="PASS"></status>
+<status endtime="20170717 15:12:19.343" starttime="20170717 15:12:11.786" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap Colllection">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/SettingBTN</arg>
 </arguments>
-<status endtime="20170704 11:25:11.367" starttime="20170704 11:25:07.954" status="PASS"></status>
+<status endtime="20170717 15:12:22.531" starttime="20170717 15:12:19.344" status="PASS"></status>
 </kw>
 <kw library="HU" name="Exist Image Collection">
 <arguments>
@@ -103,8 +102,8 @@
 <assign>
 <var>${star image}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:25:12.768">${star image} = True</msg>
-<status endtime="20170704 11:25:12.771" starttime="20170704 11:25:11.372" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:23.984">${star image} = True</msg>
+<status endtime="20170717 15:12:23.986" starttime="20170717 15:12:22.532" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -127,11 +126,11 @@
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Star</arg>
 </arguments>
-<status endtime="20170704 11:25:15.185" starttime="20170704 11:25:12.792" status="PASS"></status>
+<status endtime="20170717 15:12:26.482" starttime="20170717 15:12:24.002" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:15.188" starttime="20170704 11:25:12.787" status="PASS"></status>
+<status endtime="20170717 15:12:26.485" starttime="20170717 15:12:23.998" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:15.195" starttime="20170704 11:25:12.779" status="PASS"></status>
+<status endtime="20170717 15:12:26.486" starttime="20170717 15:12:23.988" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -145,9 +144,9 @@
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Setting</arg>
 </arguments>
-<status endtime="20170704 11:25:17.571" starttime="20170704 11:25:15.203" status="PASS"></status>
+<status endtime="20170717 15:12:28.827" starttime="20170717 15:12:26.517" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:17.574" starttime="20170704 11:25:15.198" status="PASS"></status>
+<status endtime="20170717 15:12:28.828" starttime="20170717 15:12:26.487" status="PASS"></status>
 </kw>
 <kw type="for" name="${i} IN RANGE [ 1 | 5 ]">
 <kw type="foritem" name="${i} = 1">
@@ -156,8 +155,8 @@
 <arguments>
 <arg>${i}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:17.592">1</msg>
-<status endtime="20170704 11:25:17.598" starttime="20170704 11:25:17.588" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:28.840">1</msg>
+<status endtime="20170717 15:12:28.841" starttime="20170717 15:12:28.838" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -166,7 +165,7 @@
 <arg>HU.A Swipe Down From</arg>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:25:17.608" starttime="20170704 11:25:17.601" status="PASS"></status>
+<status endtime="20170717 15:12:28.863" starttime="20170717 15:12:28.842" status="PASS"></status>
 </kw>
 <kw library="HU" name="Get Location By Text">
 <arguments>
@@ -175,7 +174,7 @@
 <assign>
 <var>${location}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:25:19.239">b C System X
+<msg level="INFO" timestamp="20170717 15:12:30.597">b C System X
 
 YY AV Source Settings I
 
@@ -189,17 +188,17 @@ YY AV Source Settings I
 o YY Camera settings
 
 
-9 Y Demo Mode Off</msg>
-<msg level="INFO" timestamp="20170704 11:25:19.244">${location} = None</msg>
-<status endtime="20170704 11:25:19.264" starttime="20170704 11:25:17.611" status="PASS"></status>
+9 Y Demo Mode (oh</msg>
+<msg level="INFO" timestamp="20170717 15:12:30.599">${location} = None</msg>
+<status endtime="20170717 15:12:30.600" starttime="20170717 15:12:28.865" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${location}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:19.276">None</msg>
-<status endtime="20170704 11:25:19.278" starttime="20170704 11:25:19.270" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:30.603">None</msg>
+<status endtime="20170717 15:12:30.604" starttime="20170717 15:12:30.601" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -212,12 +211,12 @@ o YY Camera settings
 </arguments>
 <kw library="BuiltIn" name="Continue For Loop">
 <doc>Skips the current for loop iteration and continues from the next.</doc>
-<msg level="INFO" timestamp="20170704 11:25:19.303">Continuing for loop from the next iteration.</msg>
-<status endtime="20170704 11:25:19.322" starttime="20170704 11:25:19.299" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:30.614">Continuing for loop from the next iteration.</msg>
+<status endtime="20170717 15:12:30.615" starttime="20170717 15:12:30.612" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:19.331" starttime="20170704 11:25:19.281" status="PASS"></status>
+<status endtime="20170717 15:12:30.616" starttime="20170717 15:12:30.605" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:19.336" starttime="20170704 11:25:17.586" status="PASS"></status>
+<status endtime="20170717 15:12:30.616" starttime="20170717 15:12:28.837" status="PASS"></status>
 </kw>
 <kw type="foritem" name="${i} = 2">
 <kw library="BuiltIn" name="Log">
@@ -225,8 +224,8 @@ o YY Camera settings
 <arguments>
 <arg>${i}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:19.354">2</msg>
-<status endtime="20170704 11:25:19.358" starttime="20170704 11:25:19.342" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:30.828">2</msg>
+<status endtime="20170717 15:12:30.833" starttime="20170717 15:12:30.618" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -239,9 +238,9 @@ o YY Camera settings
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:25:21.884" starttime="20170704 11:25:19.372" status="PASS"></status>
+<status endtime="20170717 15:12:33.265" starttime="20170717 15:12:30.845" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:21.916" starttime="20170704 11:25:19.365" status="PASS"></status>
+<status endtime="20170717 15:12:33.266" starttime="20170717 15:12:30.835" status="PASS"></status>
 </kw>
 <kw library="HU" name="Get Location By Text">
 <arguments>
@@ -250,9 +249,9 @@ o YY Camera settings
 <assign>
 <var>${location}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:25:23.542">b ¢ System y/4
+<msg level="INFO" timestamp="20170717 15:12:34.923">b ¢ System y/4
 
-Y Demo Mode Off
+Y Demo Mode (oh
 
 
 [ -4 Y System Language English
@@ -265,16 +264,16 @@ o YX Restore Settings
 
 
 Q | * English (UK)</msg>
-<msg level="INFO" timestamp="20170704 11:25:23.546">${location} = None</msg>
-<status endtime="20170704 11:25:23.548" starttime="20170704 11:25:21.924" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:34.925">${location} = None</msg>
+<status endtime="20170717 15:12:34.925" starttime="20170717 15:12:33.268" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${location}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:23.554">None</msg>
-<status endtime="20170704 11:25:23.558" starttime="20170704 11:25:23.551" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:34.928">None</msg>
+<status endtime="20170717 15:12:34.932" starttime="20170717 15:12:34.926" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -287,12 +286,12 @@ Q | * English (UK)</msg>
 </arguments>
 <kw library="BuiltIn" name="Continue For Loop">
 <doc>Skips the current for loop iteration and continues from the next.</doc>
-<msg level="INFO" timestamp="20170704 11:25:23.570">Continuing for loop from the next iteration.</msg>
-<status endtime="20170704 11:25:23.573" starttime="20170704 11:25:23.567" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:34.939">Continuing for loop from the next iteration.</msg>
+<status endtime="20170717 15:12:34.940" starttime="20170717 15:12:34.937" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:23.580" starttime="20170704 11:25:23.560" status="PASS"></status>
+<status endtime="20170717 15:12:34.941" starttime="20170717 15:12:34.933" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:23.584" starttime="20170704 11:25:19.339" status="PASS"></status>
+<status endtime="20170717 15:12:34.941" starttime="20170717 15:12:30.617" status="PASS"></status>
 </kw>
 <kw type="foritem" name="${i} = 3">
 <kw library="BuiltIn" name="Log">
@@ -300,8 +299,8 @@ Q | * English (UK)</msg>
 <arguments>
 <arg>${i}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:23.607">3</msg>
-<status endtime="20170704 11:25:23.613" starttime="20170704 11:25:23.597" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:34.945">3</msg>
+<status endtime="20170717 15:12:34.945" starttime="20170717 15:12:34.943" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -314,9 +313,9 @@ Q | * English (UK)</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:25:26.005" starttime="20170704 11:25:23.631" status="PASS"></status>
+<status endtime="20170717 15:12:37.406" starttime="20170717 15:12:34.951" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:26.008" starttime="20170704 11:25:23.620" status="PASS"></status>
+<status endtime="20170717 15:12:37.407" starttime="20170717 15:12:34.946" status="PASS"></status>
 </kw>
 <kw library="HU" name="Get Location By Text">
 <arguments>
@@ -325,7 +324,7 @@ Q | * English (UK)</msg>
 <assign>
 <var>${location}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:25:27.571">b ¢ System y/4
+<msg level="INFO" timestamp="20170717 15:12:38.970">b ¢ System y/4
 
 Y English (UK)
 
@@ -340,16 +339,16 @@ Y English (UK)
 
 
 [}] realty Left</msg>
-<msg level="INFO" timestamp="20170704 11:25:27.574">${location} = None</msg>
-<status endtime="20170704 11:25:27.575" starttime="20170704 11:25:26.011" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:38.972">${location} = None</msg>
+<status endtime="20170717 15:12:38.972" starttime="20170717 15:12:37.408" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${location}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:27.581">None</msg>
-<status endtime="20170704 11:25:27.584" starttime="20170704 11:25:27.579" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:38.977">None</msg>
+<status endtime="20170717 15:12:38.978" starttime="20170717 15:12:38.973" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -362,12 +361,12 @@ Y English (UK)
 </arguments>
 <kw library="BuiltIn" name="Continue For Loop">
 <doc>Skips the current for loop iteration and continues from the next.</doc>
-<msg level="INFO" timestamp="20170704 11:25:27.595">Continuing for loop from the next iteration.</msg>
-<status endtime="20170704 11:25:27.598" starttime="20170704 11:25:27.592" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:38.985">Continuing for loop from the next iteration.</msg>
+<status endtime="20170717 15:12:38.987" starttime="20170717 15:12:38.984" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:27.600" starttime="20170704 11:25:27.586" status="PASS"></status>
+<status endtime="20170717 15:12:38.988" starttime="20170717 15:12:38.979" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:27.602" starttime="20170704 11:25:23.592" status="PASS"></status>
+<status endtime="20170717 15:12:38.989" starttime="20170717 15:12:34.942" status="PASS"></status>
 </kw>
 <kw type="foritem" name="${i} = 4">
 <kw library="BuiltIn" name="Log">
@@ -375,8 +374,8 @@ Y English (UK)
 <arguments>
 <arg>${i}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:27.610">4</msg>
-<status endtime="20170704 11:25:27.612" starttime="20170704 11:25:27.607" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:38.992">4</msg>
+<status endtime="20170717 15:12:38.993" starttime="20170717 15:12:38.990" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -389,9 +388,9 @@ Y English (UK)
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:25:30.042" starttime="20170704 11:25:27.623" status="PASS"></status>
+<status endtime="20170717 15:12:41.414" starttime="20170717 15:12:39.001" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:30.047" starttime="20170704 11:25:27.614" status="PASS"></status>
+<status endtime="20170717 15:12:41.414" starttime="20170717 15:12:38.995" status="PASS"></status>
 </kw>
 <kw library="HU" name="Get Location By Text">
 <arguments>
@@ -400,7 +399,7 @@ Y English (UK)
 <assign>
 <var>${location}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:25:31.585">b C System X
+<msg level="INFO" timestamp="20170717 15:12:42.961">b C System X
 
 YY Dimmer Settings
 
@@ -415,16 +414,16 @@ O YY Picture Adjustment
 
 
 9 Y System Information I</msg>
-<msg level="INFO" timestamp="20170704 11:25:31.589">${location} = &lt;Libs.SikuliWraper.LocationPy instance at 0x1da&gt;</msg>
-<status endtime="20170704 11:25:31.590" starttime="20170704 11:25:30.050" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:42.963">${location} = &lt;Libs.SikuliWraper.LocationPy instance at 0x58&gt;</msg>
+<status endtime="20170717 15:12:42.964" starttime="20170717 15:12:41.415" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${location}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:31.599">&lt;Libs.SikuliWraper.LocationPy instance at 0x1da&gt;</msg>
-<status endtime="20170704 11:25:31.603" starttime="20170704 11:25:31.594" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:42.967">&lt;Libs.SikuliWraper.LocationPy instance at 0x58&gt;</msg>
+<status endtime="20170717 15:12:42.968" starttime="20170717 15:12:42.965" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -453,30 +452,30 @@ O YY Picture Adjustment
 <arg>${location.x}</arg>
 <arg>${location.y}</arg>
 </arguments>
-<status endtime="20170704 11:25:32.639" starttime="20170704 11:25:31.623" status="PASS"></status>
+<status endtime="20170717 15:12:43.993" starttime="20170717 15:12:42.982" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:32.642" starttime="20170704 11:25:31.618" status="PASS"></status>
+<status endtime="20170717 15:12:43.994" starttime="20170717 15:12:42.978" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Exit For Loop">
 <doc>Stops executing the enclosing for loop.</doc>
-<msg level="INFO" timestamp="20170704 11:25:32.648">Exiting for loop altogether.</msg>
-<status endtime="20170704 11:25:32.650" starttime="20170704 11:25:32.645" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:43.996">Exiting for loop altogether.</msg>
+<status endtime="20170717 15:12:43.997" starttime="20170717 15:12:43.995" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:32.652" starttime="20170704 11:25:31.613" status="PASS"></status>
+<status endtime="20170717 15:12:43.998" starttime="20170717 15:12:42.975" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:32.655" starttime="20170704 11:25:31.606" status="PASS"></status>
+<status endtime="20170717 15:12:43.999" starttime="20170717 15:12:42.969" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:32.657" starttime="20170704 11:25:27.604" status="PASS"></status>
+<status endtime="20170717 15:12:43.999" starttime="20170717 15:12:38.989" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:32.659" starttime="20170704 11:25:17.577" status="PASS"></status>
+<status endtime="20170717 15:12:44.000" starttime="20170717 15:12:28.829" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>END LOOP</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:32.665">END LOOP</msg>
-<status endtime="20170704 11:25:32.667" starttime="20170704 11:25:32.662" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:12:44.003">END LOOP</msg>
+<status endtime="20170717 15:12:44.004" starttime="20170717 15:12:44.001" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -490,12 +489,12 @@ O YY Picture Adjustment
 <arguments>
 <arg>Firmware Information</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:34.907">b C 1 System 4
+<msg level="INFO" timestamp="20170717 15:12:46.241">b C 1 System 4
 
 YX - Firmware Information</msg>
-<status endtime="20170704 11:25:34.910" starttime="20170704 11:25:32.678" status="PASS"></status>
+<status endtime="20170717 15:12:46.243" starttime="20170717 15:12:44.008" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:34.918" starttime="20170704 11:25:32.670" status="PASS"></status>
+<status endtime="20170717 15:12:46.244" starttime="20170717 15:12:44.005" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -511,9 +510,9 @@ YX - Firmware Information</msg>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/FirmwareTitle/FirmwareTitle2.png</arg>
 <arg>4000</arg>
 </arguments>
-<status endtime="20170704 11:25:41.339" starttime="20170704 11:25:34.926" status="PASS"></status>
+<status endtime="20170717 15:12:52.654" starttime="20170717 15:12:46.249" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:41.342" starttime="20170704 11:25:34.922" status="PASS"></status>
+<status endtime="20170717 15:12:52.655" starttime="20170717 15:12:46.245" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -530,39 +529,56 @@ YX - Firmware Information</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/FirmwareText/Firmware.jpg</arg>
 </arguments>
-<status endtime="20170704 11:25:43.764" starttime="20170704 11:25:41.367" status="PASS"></status>
+<status endtime="20170717 15:12:55.138" starttime="20170717 15:12:52.662" status="PASS"></status>
 </kw>
-<msg level="INFO" timestamp="20170704 11:25:43.769">${firmware version} = 1.040000 i
+<msg level="INFO" timestamp="20170717 15:12:55.139">${firmware version} = 1.040000 i
 
 </msg>
-<status endtime="20170704 11:25:43.772" starttime="20170704 11:25:41.345" status="PASS"></status>
+<status endtime="20170717 15:12:55.140" starttime="20170717 15:12:52.656" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>${firmware version}</arg>
+<arg>Firmware verion: ${firmware version}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:43.778">1.040000 i
+<msg level="INFO" timestamp="20170717 15:12:55.145">Firmware verion: 1.040000 i
 
 </msg>
-<status endtime="20170704 11:25:43.780" starttime="20170704 11:25:43.775" status="PASS"></status>
+<status endtime="20170717 15:12:55.146" starttime="20170717 15:12:55.141" status="PASS"></status>
 </kw>
-<kw library="BuiltIn" name="Run Keyword And Continue On Failure">
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Sucess And Capture">
 <arguments>
-<arg>Should Contain</arg>
-<arg>${firmware version}</arg>
-<arg>1.040000</arg>
+<arg>Firmware version matches with 1.040000</arg>
 </arguments>
-<kw library="BuiltIn" name="Should Contain">
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<kw library="OperatingSystem" name="Create Directory">
+<doc>Creates the specified directory.</doc>
 <arguments>
-<arg>${firmware version}</arg>
-<arg>1.040000</arg>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/OutputResources</arg>
 </arguments>
-<status endtime="20170704 11:25:43.793" starttime="20170704 11:25:43.786" status="PASS"></status>
+<msg level="INFO" html="yes" timestamp="20170717 15:12:55.152">Directory '&lt;a href="file://C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\OutputResources"&gt;C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\OutputResources&lt;/a&gt;' already exists.</msg>
+<status endtime="20170717 15:12:55.153" starttime="20170717 15:12:55.149" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:43.795" starttime="20170704 11:25:43.782" status="PASS"></status>
+<kw library="HU" name="Capture Screen And Return File Name">
+<arguments>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/OutputResources</arg>
+<arg>${TEST NAME}</arg>
+</arguments>
+<assign>
+<var>${image name}</var>
+</assign>
+<msg level="INFO" timestamp="20170717 15:12:55.808">${image name} = Change Setting-1500279175687.png</msg>
+<status endtime="20170717 15:12:55.808" starttime="20170717 15:12:55.155" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${message} &lt;img src="OutputResources/${image name}" alt="${message}"/&gt;</arg>
+<arg>HTML</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20170717 15:12:55.816">Firmware version matches with 1.040000 &lt;img src="OutputResources/Change Setting-1500279175687.png" alt="Firmware version matches with 1.040000"/&gt;</msg>
+<status endtime="20170717 15:12:55.817" starttime="20170717 15:12:55.809" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:12:55.819" starttime="20170717 15:12:55.147" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -579,7 +595,7 @@ YX - Firmware Information</msg>
 <arguments>
 <arg>Platform</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:46.930">*
+<msg level="INFO" timestamp="20170717 15:12:58.704">*
 A
 Firmware
 Information
@@ -589,42 +605,63 @@ Firmware
 (
 .4
 Platform</msg>
-<status endtime="20170704 11:25:46.933" starttime="20170704 11:25:43.805" status="PASS"></status>
+<status endtime="20170717 15:12:58.705" starttime="20170717 15:12:55.826" status="PASS"></status>
 </kw>
-<msg level="INFO" timestamp="20170704 11:25:46.937">${Data version} = \ 1 040000 - M
+<msg level="INFO" timestamp="20170717 15:12:58.706">${Data version} = \ 1 040000 - M
 
 </msg>
-<status endtime="20170704 11:25:46.938" starttime="20170704 11:25:43.798" status="PASS"></status>
+<status endtime="20170717 15:12:58.706" starttime="20170717 15:12:55.821" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>${Data version}</arg>
+<arg>Dataverion : ${Data version}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:25:46.943">\ 1 040000 - M
+<msg level="INFO" timestamp="20170717 15:12:58.709">Dataverion : \ 1 040000 - M
 
 </msg>
-<status endtime="20170704 11:25:46.945" starttime="20170704 11:25:46.941" status="PASS"></status>
+<status endtime="20170717 15:12:58.709" starttime="20170717 15:12:58.707" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword And Continue On Failure">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
-<arg>Should Contain</arg>
-<arg>${Data version}</arg>
-<arg>1.040000</arg>
+<arg>Fail And Capture</arg>
+<arg>Data version don't matches with 1.040000234</arg>
 </arguments>
-<kw library="BuiltIn" name="Should Contain">
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<kw name="Fail And Capture">
 <arguments>
-<arg>${Data version}</arg>
-<arg>1.040000</arg>
+<arg>Data version don't matches with 1.040000234</arg>
 </arguments>
-<msg level="FAIL" timestamp="20170704 11:25:46.954">'\ 1 040000 - M
-
-' does not contain '1.040000'</msg>
-<status endtime="20170704 11:25:46.955" starttime="20170704 11:25:46.950" status="FAIL"></status>
+<kw library="OperatingSystem" name="Create Directory">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/OutputResources</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20170717 15:12:58.720">Directory '&lt;a href="file://C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\OutputResources"&gt;C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\OutputResources&lt;/a&gt;' already exists.</msg>
+<status endtime="20170717 15:12:58.722" starttime="20170717 15:12:58.716" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:46.958" starttime="20170704 11:25:46.947" status="FAIL"></status>
+<kw library="HU" name="Capture Screen And Return File Name">
+<arguments>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/OutputResources</arg>
+<arg>${TEST NAME}</arg>
+</arguments>
+<assign>
+<var>${image name}</var>
+</assign>
+<msg level="INFO" timestamp="20170717 15:12:59.514">${image name} = Change Setting-1500279179277.png</msg>
+<status endtime="20170717 15:12:59.515" starttime="20170717 15:12:58.724" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Fail">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>*HTML*${message} &lt;img src="OutputResources/${image name}" alt="${message}"/&gt;</arg>
+</arguments>
+<msg level="FAIL" html="yes" timestamp="20170717 15:12:59.520">Data version don't matches with 1.040000234 &lt;img src="OutputResources/Change Setting-1500279179277.png" alt="Data version don't matches with 1.040000234"/&gt;</msg>
+<status endtime="20170717 15:12:59.521" starttime="20170717 15:12:59.516" status="FAIL"></status>
+</kw>
+<status endtime="20170717 15:12:59.523" starttime="20170717 15:12:58.714" status="FAIL"></status>
+</kw>
+<status endtime="20170717 15:12:59.523" starttime="20170717 15:12:58.711" status="FAIL"></status>
 </kw>
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -638,9 +675,9 @@ Platform</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/ThemeBTN</arg>
 </arguments>
-<status endtime="20170704 11:25:49.344" starttime="20170704 11:25:46.966" status="PASS"></status>
+<status endtime="20170717 15:13:01.924" starttime="20170717 15:12:59.528" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:49.346" starttime="20170704 11:25:46.960" status="PASS"></status>
+<status endtime="20170717 15:13:01.925" starttime="20170717 15:12:59.524" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -654,9 +691,9 @@ Platform</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Clock.jpg</arg>
 </arguments>
-<status endtime="20170704 11:25:51.708" starttime="20170704 11:25:49.353" status="PASS"></status>
+<status endtime="20170717 15:13:04.294" starttime="20170717 15:13:01.928" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:51.710" starttime="20170704 11:25:49.349" status="PASS"></status>
+<status endtime="20170717 15:13:04.294" starttime="20170717 15:13:01.926" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Wait Until Keyword Succeeds">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -670,9 +707,9 @@ Platform</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/BackBTN.png</arg>
 </arguments>
-<status endtime="20170704 11:25:55.857" starttime="20170704 11:25:51.716" status="PASS"></status>
+<status endtime="20170717 15:13:08.378" starttime="20170717 15:13:04.298" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:55.859" starttime="20170704 11:25:51.712" status="PASS"></status>
+<status endtime="20170717 15:13:08.379" starttime="20170717 15:13:04.295" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -684,9 +721,9 @@ Platform</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/SpeakerBTN</arg>
 </arguments>
-<status endtime="20170704 11:25:58.371" starttime="20170704 11:25:55.864" status="PASS"></status>
+<status endtime="20170717 15:13:10.716" starttime="20170717 15:13:08.383" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:25:58.374" starttime="20170704 11:25:55.862" status="PASS"></status>
+<status endtime="20170717 15:13:10.717" starttime="20170717 15:13:08.380" status="PASS"></status>
 </kw>
 <kw type="for" name="${i} IN RANGE [ 1 | 4 ]">
 <kw type="foritem" name="${i} = 1">
@@ -695,16 +732,16 @@ Platform</msg>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:26:00.386">Slept 2 seconds</msg>
-<status endtime="20170704 11:26:00.388" starttime="20170704 11:25:58.382" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:12.726">Slept 2 seconds</msg>
+<status endtime="20170717 15:13:12.727" starttime="20170717 15:13:10.723" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Swipe Down From">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:26:03.002" starttime="20170704 11:26:00.391" status="PASS"></status>
+<status endtime="20170717 15:13:15.125" starttime="20170717 15:13:12.728" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:03.006" starttime="20170704 11:25:58.381" status="PASS"></status>
+<status endtime="20170717 15:13:15.126" starttime="20170717 15:13:10.722" status="PASS"></status>
 </kw>
 <kw type="foritem" name="${i} = 2">
 <kw library="BuiltIn" name="Sleep">
@@ -712,16 +749,16 @@ Platform</msg>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:26:05.013">Slept 2 seconds</msg>
-<status endtime="20170704 11:26:05.015" starttime="20170704 11:26:03.011" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:17.129">Slept 2 seconds</msg>
+<status endtime="20170717 15:13:17.130" starttime="20170717 15:13:15.127" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Swipe Down From">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:26:07.447" starttime="20170704 11:26:05.017" status="PASS"></status>
+<status endtime="20170717 15:13:19.567" starttime="20170717 15:13:17.131" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:07.450" starttime="20170704 11:26:03.009" status="PASS"></status>
+<status endtime="20170717 15:13:19.568" starttime="20170717 15:13:15.127" status="PASS"></status>
 </kw>
 <kw type="foritem" name="${i} = 3">
 <kw library="BuiltIn" name="Sleep">
@@ -729,18 +766,18 @@ Platform</msg>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:26:09.457">Slept 2 seconds</msg>
-<status endtime="20170704 11:26:09.460" starttime="20170704 11:26:07.454" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:21.572">Slept 2 seconds</msg>
+<status endtime="20170717 15:13:21.573" starttime="20170717 15:13:19.570" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Swipe Down From">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:26:11.864" starttime="20170704 11:26:09.469" status="PASS"></status>
+<status endtime="20170717 15:13:24.013" starttime="20170717 15:13:21.574" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:11.868" starttime="20170704 11:26:07.452" status="PASS"></status>
+<status endtime="20170717 15:13:24.013" starttime="20170717 15:13:19.569" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:11.870" starttime="20170704 11:25:58.376" status="PASS"></status>
+<status endtime="20170717 15:13:24.013" starttime="20170717 15:13:10.718" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -752,9 +789,9 @@ Platform</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/VideoBTN</arg>
 </arguments>
-<status endtime="20170704 11:26:14.345" starttime="20170704 11:26:11.875" status="PASS"></status>
+<status endtime="20170717 15:13:26.396" starttime="20170717 15:13:24.016" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:14.348" starttime="20170704 11:26:11.872" status="PASS"></status>
+<status endtime="20170717 15:13:26.397" starttime="20170717 15:13:24.014" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -766,9 +803,9 @@ Platform</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/BluetoothBTN</arg>
 </arguments>
-<status endtime="20170704 11:26:16.719" starttime="20170704 11:26:14.355" status="PASS"></status>
+<status endtime="20170717 15:13:28.789" starttime="20170717 15:13:26.401" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:16.721" starttime="20170704 11:26:14.350" status="PASS"></status>
+<status endtime="20170717 15:13:28.790" starttime="20170717 15:13:26.398" status="PASS"></status>
 </kw>
 <kw type="for" name="${i} IN RANGE [ 1 | 4 ]">
 <kw type="foritem" name="${i} = 1">
@@ -777,16 +814,16 @@ Platform</msg>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:26:18.733">Slept 2 seconds</msg>
-<status endtime="20170704 11:26:18.735" starttime="20170704 11:26:16.730" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:30.798">Slept 2 seconds</msg>
+<status endtime="20170717 15:13:30.886" starttime="20170717 15:13:28.796" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Swipe Down From">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:26:21.100" starttime="20170704 11:26:18.741" status="PASS"></status>
+<status endtime="20170717 15:13:33.297" starttime="20170717 15:13:30.887" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:21.102" starttime="20170704 11:26:16.728" status="PASS"></status>
+<status endtime="20170717 15:13:33.299" starttime="20170717 15:13:28.795" status="PASS"></status>
 </kw>
 <kw type="foritem" name="${i} = 2">
 <kw library="BuiltIn" name="Sleep">
@@ -794,16 +831,16 @@ Platform</msg>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:26:23.110">Slept 2 seconds</msg>
-<status endtime="20170704 11:26:23.116" starttime="20170704 11:26:21.106" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:35.302">Slept 2 seconds</msg>
+<status endtime="20170717 15:13:35.303" starttime="20170717 15:13:33.301" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Swipe Down From">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:26:25.526" starttime="20170704 11:26:23.119" status="PASS"></status>
+<status endtime="20170717 15:13:37.923" starttime="20170717 15:13:35.305" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:25.528" starttime="20170704 11:26:21.104" status="PASS"></status>
+<status endtime="20170717 15:13:37.924" starttime="20170717 15:13:33.300" status="PASS"></status>
 </kw>
 <kw type="foritem" name="${i} = 3">
 <kw library="BuiltIn" name="Sleep">
@@ -811,28 +848,48 @@ Platform</msg>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:26:27.535">Slept 2 seconds</msg>
-<status endtime="20170704 11:26:27.537" starttime="20170704 11:26:25.533" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:39.927">Slept 2 seconds</msg>
+<status endtime="20170717 15:13:39.928" starttime="20170717 15:13:37.925" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Swipe Down From">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/Scroolbar.png</arg>
 </arguments>
-<status endtime="20170704 11:26:29.994" starttime="20170704 11:26:27.540" status="PASS"></status>
+<status endtime="20170717 15:13:42.515" starttime="20170717 15:13:39.930" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:30.000" starttime="20170704 11:26:25.531" status="PASS"></status>
+<status endtime="20170717 15:13:42.516" starttime="20170717 15:13:37.924" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:30.006" starttime="20170704 11:26:16.723" status="PASS"></status>
+<status endtime="20170717 15:13:42.516" starttime="20170717 15:13:28.790" status="PASS"></status>
 </kw>
-<status critical="yes" endtime="20170704 11:26:30.012" starttime="20170704 11:24:55.087" status="FAIL">'\ 1 040000 - M
-
-' does not contain '1.040000'</status>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:43.518">Slept 1 second</msg>
+<status endtime="20170717 15:13:43.519" starttime="20170717 15:13:42.517" status="PASS"></status>
+</kw>
+<kw library="HU" name="Tap">
+<arguments>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/CloseBTN.png</arg>
+</arguments>
+<status endtime="20170717 15:13:45.926" starttime="20170717 15:13:43.520" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20170717 15:13:45.927" starttime="20170717 15:12:08.549" status="FAIL">*HTML*Data version don't matches with 1.040000234 &lt;img src="OutputResources/Change Setting-1500279179277.png" alt="Data version don't matches with 1.040000234"/&gt;</status>
 </test>
-<test name="Press Eject Icon" id="s1-s1-t2">
+<test name="Press Eject Icon" id="s1-t2">
 <kw name="Press Eject Icon">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/DVDEJ.png</arg>
 </arguments>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>start ${image path}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:45.943">start C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation/Images/Settings/DVDEJ.png</msg>
+<status endtime="20170717 15:13:45.944" starttime="20170717 15:13:45.941" status="PASS"></status>
+</kw>
 <kw library="HU" name="Exist Image">
 <arguments>
 <arg>${image path}</arg>
@@ -840,36 +897,17 @@ Platform</msg>
 <assign>
 <var>${image exist}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:26:31.453">${image exist} = True</msg>
-<status endtime="20170704 11:26:31.455" starttime="20170704 11:26:30.030" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:49.012">${image exist} = False</msg>
+<status endtime="20170717 15:13:49.013" starttime="20170717 15:13:45.945" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <arguments>
 <arg>${image exist}</arg>
-<arg>Wait Until Keyword Succeeds</arg>
-<arg>3s</arg>
-<arg>1s</arg>
 <arg>HU.Tap</arg>
 <arg>${image path}</arg>
 </arguments>
-<kw library="BuiltIn" name="Wait Until Keyword Succeeds">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>3s</arg>
-<arg>1s</arg>
-<arg>HU.Tap</arg>
-<arg>${image path}</arg>
-</arguments>
-<kw library="HU" name="Tap">
-<arguments>
-<arg>${image path}</arg>
-</arguments>
-<status endtime="20170704 11:26:34.128" starttime="20170704 11:26:31.473" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:34.131" starttime="20170704 11:26:31.462" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:34.133" starttime="20170704 11:26:31.458" status="PASS"></status>
+<status endtime="20170717 15:13:49.015" starttime="20170717 15:13:49.013" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -878,18 +916,63 @@ Platform</msg>
 <arg>Sleep</arg>
 <arg>1s</arg>
 </arguments>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:26:35.141">Slept 1 second</msg>
-<status endtime="20170704 11:26:35.144" starttime="20170704 11:26:34.139" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:35.146" starttime="20170704 11:26:34.136" status="PASS"></status>
+<status endtime="20170717 15:13:49.018" starttime="20170717 15:13:49.016" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if true start press hard key</arg>
+</arguments>
+<status endtime="20170717 15:13:49.021" starttime="20170717 15:13:49.019" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>HU.Press Hard Key</arg>
+<arg>13</arg>
+</arguments>
+<status endtime="20170717 15:13:49.025" starttime="20170717 15:13:49.022" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if true end press hard key</arg>
+</arguments>
+<status endtime="20170717 15:13:49.029" starttime="20170717 15:13:49.027" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Sleep</arg>
+<arg>1s</arg>
+</arguments>
+<status endtime="20170717 15:13:49.032" starttime="20170717 15:13:49.030" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if false start press hard key</arg>
+</arguments>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>if false start press hard key</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:49.037">if false start press hard key</msg>
+<status endtime="20170717 15:13:49.037" starttime="20170717 15:13:49.035" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:13:49.038" starttime="20170717 15:13:49.033" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
 <arguments>
 <arg>${image exist}</arg>
 <arg>HU.Press Hard Key</arg>
@@ -899,12 +982,29 @@ Platform</msg>
 <arguments>
 <arg>13</arg>
 </arguments>
-<status endtime="20170704 11:26:36.158" starttime="20170704 11:26:35.151" status="PASS"></status>
+<status endtime="20170717 15:13:50.066" starttime="20170717 15:13:49.042" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:36.160" starttime="20170704 11:26:35.148" status="PASS"></status>
+<status endtime="20170717 15:13:50.067" starttime="20170717 15:13:49.039" status="PASS"></status>
 </kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if false end press hard key</arg>
+</arguments>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>if false end press hard key</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:50.071">if false end press hard key</msg>
+<status endtime="20170717 15:13:50.072" starttime="20170717 15:13:50.070" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:13:50.072" starttime="20170717 15:13:50.068" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
 <arguments>
 <arg>${image exist}</arg>
 <arg>Sleep</arg>
@@ -915,40 +1015,25 @@ Platform</msg>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:26:37.170">Slept 1 second</msg>
-<status endtime="20170704 11:26:37.172" starttime="20170704 11:26:36.167" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:51.076">Slept 1 second</msg>
+<status endtime="20170717 15:13:51.078" starttime="20170717 15:13:50.075" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:37.175" starttime="20170704 11:26:36.163" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.Press Hard Key</arg>
-<arg>13</arg>
-</arguments>
-<status endtime="20170704 11:26:37.181" starttime="20170704 11:26:37.178" status="PASS"></status>
+<status endtime="20170717 15:13:51.078" starttime="20170717 15:13:50.073" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
 <arguments>
 <arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
-</arguments>
-<status endtime="20170704 11:26:37.185" starttime="20170704 11:26:37.183" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Wait Until Keyword Succeeds</arg>
-<arg>3s</arg>
-<arg>1s</arg>
 <arg>HU.Tap</arg>
 <arg>${image path}</arg>
 </arguments>
-<status endtime="20170704 11:26:37.190" starttime="20170704 11:26:37.187" status="PASS"></status>
+<kw library="HU" name="Tap">
+<arguments>
+<arg>${image path}</arg>
+</arguments>
+<status endtime="20170717 15:13:53.464" starttime="20170717 15:13:51.087" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:13:53.465" starttime="20170717 15:13:51.083" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -957,7 +1042,32 @@ Platform</msg>
 <arg>Sleep</arg>
 <arg>1s</arg>
 </arguments>
-<status endtime="20170704 11:26:37.195" starttime="20170704 11:26:37.192" status="PASS"></status>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:54.470">Slept 1 second</msg>
+<status endtime="20170717 15:13:54.471" starttime="20170717 15:13:53.468" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:13:54.472" starttime="20170717 15:13:53.466" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if false start press hard key 2nd</arg>
+</arguments>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>if false start press hard key 2nd</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:54.480">if false start press hard key 2nd</msg>
+<status endtime="20170717 15:13:54.481" starttime="20170717 15:13:54.478" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:13:54.481" starttime="20170717 15:13:54.472" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -966,7 +1076,30 @@ Platform</msg>
 <arg>HU.Press Hard Key</arg>
 <arg>13</arg>
 </arguments>
-<status endtime="20170704 11:26:37.199" starttime="20170704 11:26:37.197" status="PASS"></status>
+<kw library="HU" name="Press Hard Key">
+<arguments>
+<arg>13</arg>
+</arguments>
+<status endtime="20170717 15:13:55.489" starttime="20170717 15:13:54.484" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:13:55.491" starttime="20170717 15:13:54.482" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if false end press hard key 2nd</arg>
+</arguments>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>if false end press hard key 2nd</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:55.494">if false end press hard key 2nd</msg>
+<status endtime="20170717 15:13:55.495" starttime="20170717 15:13:55.493" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:13:55.496" starttime="20170717 15:13:55.492" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -975,14 +1108,38 @@ Platform</msg>
 <arg>Sleep</arg>
 <arg>1s</arg>
 </arguments>
-<status endtime="20170704 11:26:37.204" starttime="20170704 11:26:37.201" status="PASS"></status>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:56.500">Slept 1 second</msg>
+<status endtime="20170717 15:13:56.501" starttime="20170717 15:13:55.498" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:37.207" starttime="20170704 11:26:30.027" status="PASS"></status>
+<status endtime="20170717 15:13:56.502" starttime="20170717 15:13:55.496" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>end ${image path}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:56.504">end C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation/Images/Settings/DVDEJ.png</msg>
+<status endtime="20170717 15:13:56.505" starttime="20170717 15:13:56.502" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:13:56.505" starttime="20170717 15:13:45.934" status="PASS"></status>
 </kw>
 <kw name="Press Eject Icon">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/DVDEJ2.png</arg>
 </arguments>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>start ${image path}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:13:56.511">start C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation/Images/Settings/DVDEJ2.png</msg>
+<status endtime="20170717 15:13:56.511" starttime="20170717 15:13:56.509" status="PASS"></status>
+</kw>
 <kw library="HU" name="Exist Image">
 <arguments>
 <arg>${image path}</arg>
@@ -990,36 +1147,17 @@ Platform</msg>
 <assign>
 <var>${image exist}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:26:38.653">${image exist} = True</msg>
-<status endtime="20170704 11:26:38.656" starttime="20170704 11:26:37.225" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:59.617">${image exist} = False</msg>
+<status endtime="20170717 15:13:59.617" starttime="20170717 15:13:56.512" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <arguments>
 <arg>${image exist}</arg>
-<arg>Wait Until Keyword Succeeds</arg>
-<arg>3s</arg>
-<arg>1s</arg>
 <arg>HU.Tap</arg>
 <arg>${image path}</arg>
 </arguments>
-<kw library="BuiltIn" name="Wait Until Keyword Succeeds">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>3s</arg>
-<arg>1s</arg>
-<arg>HU.Tap</arg>
-<arg>${image path}</arg>
-</arguments>
-<kw library="HU" name="Tap">
-<arguments>
-<arg>${image path}</arg>
-</arguments>
-<status endtime="20170704 11:26:41.065" starttime="20170704 11:26:38.669" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:41.067" starttime="20170704 11:26:38.666" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:41.070" starttime="20170704 11:26:38.661" status="PASS"></status>
+<status endtime="20170717 15:13:59.620" starttime="20170717 15:13:59.618" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1028,15 +1166,16 @@ Platform</msg>
 <arg>Sleep</arg>
 <arg>1s</arg>
 </arguments>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:26:42.077">Slept 1 second</msg>
-<status endtime="20170704 11:26:42.079" starttime="20170704 11:26:41.075" status="PASS"></status>
+<status endtime="20170717 15:13:59.623" starttime="20170717 15:13:59.621" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:42.085" starttime="20170704 11:26:41.072" status="PASS"></status>
+<kw library="BuiltIn" name="Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if true start press hard key</arg>
+</arguments>
+<status endtime="20170717 15:13:59.626" starttime="20170717 15:13:59.624" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1045,13 +1184,16 @@ Platform</msg>
 <arg>HU.Press Hard Key</arg>
 <arg>13</arg>
 </arguments>
-<kw library="HU" name="Press Hard Key">
-<arguments>
-<arg>13</arg>
-</arguments>
-<status endtime="20170704 11:26:43.098" starttime="20170704 11:26:42.090" status="PASS"></status>
+<status endtime="20170717 15:13:59.636" starttime="20170717 15:13:59.627" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:43.101" starttime="20170704 11:26:42.087" status="PASS"></status>
+<kw library="BuiltIn" name="Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if true end press hard key</arg>
+</arguments>
+<status endtime="20170717 15:13:59.641" starttime="20170717 15:13:59.639" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1060,127 +1202,24 @@ Platform</msg>
 <arg>Sleep</arg>
 <arg>1s</arg>
 </arguments>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:26:44.111">Slept 1 second</msg>
-<status endtime="20170704 11:26:44.115" starttime="20170704 11:26:43.109" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:44.117" starttime="20170704 11:26:43.105" status="PASS"></status>
+<status endtime="20170717 15:13:59.644" starttime="20170717 15:13:59.642" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
 <arguments>
 <arg>${image exist}</arg>
-<arg>HU.Press Hard Key</arg>
-<arg>13</arg>
+<arg>Log</arg>
+<arg>if false start press hard key</arg>
 </arguments>
-<status endtime="20170704 11:26:44.122" starttime="20170704 11:26:44.119" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
+<arg>if false start press hard key</arg>
 </arguments>
-<status endtime="20170704 11:26:44.127" starttime="20170704 11:26:44.124" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:13:59.653">if false start press hard key</msg>
+<status endtime="20170717 15:13:59.653" starttime="20170717 15:13:59.651" status="PASS"></status>
 </kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Wait Until Keyword Succeeds</arg>
-<arg>3s</arg>
-<arg>1s</arg>
-<arg>HU.Tap</arg>
-<arg>${image path}</arg>
-</arguments>
-<status endtime="20170704 11:26:44.132" starttime="20170704 11:26:44.129" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
-</arguments>
-<status endtime="20170704 11:26:44.137" starttime="20170704 11:26:44.134" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.Press Hard Key</arg>
-<arg>13</arg>
-</arguments>
-<status endtime="20170704 11:26:44.142" starttime="20170704 11:26:44.139" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
-</arguments>
-<status endtime="20170704 11:26:44.146" starttime="20170704 11:26:44.143" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:44.149" starttime="20170704 11:26:37.219" status="PASS"></status>
-</kw>
-<kw name="Press Eject Icon">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/SCardBTN.png</arg>
-</arguments>
-<kw library="HU" name="Exist Image">
-<arguments>
-<arg>${image path}</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:26:47.291">${image exist} = False</msg>
-<status endtime="20170704 11:26:47.294" starttime="20170704 11:26:44.155" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Wait Until Keyword Succeeds</arg>
-<arg>3s</arg>
-<arg>1s</arg>
-<arg>HU.Tap</arg>
-<arg>${image path}</arg>
-</arguments>
-<status endtime="20170704 11:26:47.302" starttime="20170704 11:26:47.297" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
-</arguments>
-<status endtime="20170704 11:26:47.306" starttime="20170704 11:26:47.303" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.Press Hard Key</arg>
-<arg>13</arg>
-</arguments>
-<status endtime="20170704 11:26:47.310" starttime="20170704 11:26:47.308" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
-</arguments>
-<status endtime="20170704 11:26:47.315" starttime="20170704 11:26:47.312" status="PASS"></status>
+<status endtime="20170717 15:13:59.654" starttime="20170717 15:13:59.649" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -1193,9 +1232,26 @@ Platform</msg>
 <arguments>
 <arg>13</arg>
 </arguments>
-<status endtime="20170704 11:26:48.327" starttime="20170704 11:26:47.320" status="PASS"></status>
+<status endtime="20170717 15:14:00.664" starttime="20170717 15:13:59.658" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:48.330" starttime="20170704 11:26:47.317" status="PASS"></status>
+<status endtime="20170717 15:14:00.665" starttime="20170717 15:13:59.655" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>${image exist}</arg>
+<arg>Log</arg>
+<arg>if false end press hard key</arg>
+</arguments>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>if false end press hard key</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:14:00.669">if false end press hard key</msg>
+<status endtime="20170717 15:14:00.670" starttime="20170717 15:14:00.668" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:14:00.670" starttime="20170717 15:14:00.666" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -1209,263 +1265,50 @@ Platform</msg>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:26:49.341">Slept 1 second</msg>
-<status endtime="20170704 11:26:49.343" starttime="20170704 11:26:48.337" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:01.675">Slept 1 second</msg>
+<status endtime="20170717 15:14:01.676" starttime="20170717 15:14:00.673" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:26:49.345" starttime="20170704 11:26:48.333" status="PASS"></status>
+<status endtime="20170717 15:14:01.677" starttime="20170717 15:14:00.671" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
 <arguments>
 <arg>${image exist}</arg>
-<arg>Wait Until Keyword Succeeds</arg>
-<arg>3s</arg>
-<arg>1s</arg>
 <arg>HU.Tap</arg>
 <arg>${image path}</arg>
 </arguments>
-<kw library="BuiltIn" name="Wait Until Keyword Succeeds">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>3s</arg>
-<arg>1s</arg>
-<arg>HU.Tap</arg>
-<arg>${image path}</arg>
-</arguments>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>${image path}</arg>
 </arguments>
-<status endtime="20170704 11:26:51.705" starttime="20170704 11:26:49.354" status="PASS"></status>
+<msg level="FAIL" timestamp="20170717 15:14:04.776">FindFailed: C:/Users/tuanhq/projects/java/SikuliX-2014/HUAutomation/Images/Settings/DVDEJ2.png: (103x60) in ADBScreen: Android device: 0123456789ABCDEF (800 x 480)</msg>
+<status endtime="20170717 15:14:04.778" starttime="20170717 15:14:01.679" status="FAIL"></status>
 </kw>
-<status endtime="20170704 11:26:51.707" starttime="20170704 11:26:49.350" status="PASS"></status>
+<status endtime="20170717 15:14:04.778" starttime="20170717 15:14:01.677" status="FAIL"></status>
 </kw>
-<status endtime="20170704 11:26:51.709" starttime="20170704 11:26:49.347" status="PASS"></status>
+<status endtime="20170717 15:14:04.779" starttime="20170717 15:13:56.506" status="FAIL"></status>
 </kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
-</arguments>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:26:52.718">Slept 1 second</msg>
-<status endtime="20170704 11:26:52.721" starttime="20170704 11:26:51.714" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:52.723" starttime="20170704 11:26:51.711" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.Press Hard Key</arg>
-<arg>13</arg>
-</arguments>
-<kw library="HU" name="Press Hard Key">
-<arguments>
-<arg>13</arg>
-</arguments>
-<status endtime="20170704 11:26:53.743" starttime="20170704 11:26:52.728" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:53.746" starttime="20170704 11:26:52.725" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
-</arguments>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:26:54.753">Slept 1 second</msg>
-<status endtime="20170704 11:26:54.755" starttime="20170704 11:26:53.750" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:54.757" starttime="20170704 11:26:53.747" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:26:54.760" starttime="20170704 11:26:44.151" status="PASS"></status>
-</kw>
-<kw library="HU" name="Exist Image">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/DVDEJ.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:26:56.174">${image exist} = True</msg>
-<status endtime="20170704 11:26:56.176" starttime="20170704 11:26:54.762" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Press Inc Or Dec Angle</arg>
-</arguments>
-<kw name="Press Inc Or Dec Angle">
-<kw library="HU" name="Exist Image">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/IncAngleDis.png</arg>
-</arguments>
-<assign>
-<var>${dvd eject4}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:26:59.285">${dvd eject4} = False</msg>
-<status endtime="20170704 11:26:59.288" starttime="20170704 11:26:56.188" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${dvd eject4}</arg>
-<arg>Tap IncAngleDis</arg>
-</arguments>
-<status endtime="20170704 11:26:59.295" starttime="20170704 11:26:59.292" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${dvd eject4}</arg>
-<arg>Tap DecAngleDisable</arg>
-</arguments>
-<kw name="Tap DecAngleDisable">
-<kw library="HU" name="Press Hard Key">
-<arguments>
-<arg>13</arg>
-</arguments>
-<status endtime="20170704 11:27:00.317" starttime="20170704 11:26:59.308" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:27:01.321">Slept 1 second</msg>
-<status endtime="20170704 11:27:01.324" starttime="20170704 11:27:00.319" status="PASS"></status>
-</kw>
-<kw library="HU" name="Tap">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/IncAngleEnable/IncAngleEnable.png</arg>
-</arguments>
-<status endtime="20170704 11:27:03.703" starttime="20170704 11:27:01.328" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:27:04.709">Slept 1 second</msg>
-<status endtime="20170704 11:27:04.711" starttime="20170704 11:27:03.706" status="PASS"></status>
-</kw>
-<kw library="HU" name="Tap">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/DecAngleEnable.png</arg>
-</arguments>
-<status endtime="20170704 11:27:07.094" starttime="20170704 11:27:04.713" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:27:08.100">Slept 1 second</msg>
-<status endtime="20170704 11:27:08.103" starttime="20170704 11:27:07.097" status="PASS"></status>
-</kw>
-<kw library="HU" name="Tap">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/IncAngleEnable/IncAngleEnable.png</arg>
-</arguments>
-<status endtime="20170704 11:27:10.621" starttime="20170704 11:27:08.105" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:27:11.626">Slept 1 second</msg>
-<status endtime="20170704 11:27:11.628" starttime="20170704 11:27:10.624" status="PASS"></status>
-</kw>
-<kw library="HU" name="Tap">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/DecAngleEnable.png</arg>
-</arguments>
-<status endtime="20170704 11:27:13.981" starttime="20170704 11:27:11.630" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Sleep">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg level="INFO" timestamp="20170704 11:27:14.986">Slept 1 second</msg>
-<status endtime="20170704 11:27:14.989" starttime="20170704 11:27:13.984" status="PASS"></status>
-</kw>
-<kw library="HU" name="Press Hard Key">
-<arguments>
-<arg>13</arg>
-</arguments>
-<status endtime="20170704 11:27:16.006" starttime="20170704 11:27:14.998" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:27:16.009" starttime="20170704 11:26:59.304" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:27:16.011" starttime="20170704 11:26:59.301" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:27:16.014" starttime="20170704 11:26:56.184" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:27:16.034" starttime="20170704 11:26:56.178" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.Press Hard Key</arg>
-<arg>13</arg>
-</arguments>
-<status endtime="20170704 11:27:16.040" starttime="20170704 11:27:16.037" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Sleep</arg>
-<arg>1s</arg>
-</arguments>
-<status endtime="20170704 11:27:16.044" starttime="20170704 11:27:16.042" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Press Inc Or Dec Angle</arg>
-</arguments>
-<status endtime="20170704 11:27:16.048" starttime="20170704 11:27:16.046" status="PASS"></status>
-</kw>
-<status critical="yes" endtime="20170704 11:27:16.050" starttime="20170704 11:26:30.023" status="PASS"></status>
+<status critical="yes" endtime="20170717 15:14:04.781" starttime="20170717 15:13:45.930" status="FAIL">FindFailed: C:/Users/tuanhq/projects/java/SikuliX-2014/HUAutomation/Images/Settings/DVDEJ2.png: (103x60) in ADBScreen: Android device: 0123456789ABCDEF (800 x 480)</status>
 </test>
-<test name="Call Via Bluetooth" id="s1-s1-t3">
+<test name="Call Via Bluetooth" id="s1-t3">
 <kw library="AndroidMB" name="Tap On Key">
 <arguments>
 <arg>HOME</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:17.066">Start
+<msg level="INFO" timestamp="20170717 15:14:05.791">Start
 END</msg>
-<status endtime="20170704 11:27:17.068" starttime="20170704 11:27:16.059" status="PASS"></status>
+<status endtime="20170717 15:14:05.792" starttime="20170717 15:14:04.785" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:18.073">Slept 1 second</msg>
-<status endtime="20170704 11:27:18.075" starttime="20170704 11:27:17.071" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:06.794">Slept 1 second</msg>
+<status endtime="20170717 15:14:06.795" starttime="20170717 15:14:05.793" status="PASS"></status>
 </kw>
 <kw library="AndroidMB" name="A Swipe Down From Top">
-<status endtime="20170704 11:27:19.083" starttime="20170704 11:27:18.077" status="PASS"></status>
+<status endtime="20170717 15:14:07.801" starttime="20170717 15:14:06.796" status="PASS"></status>
 </kw>
 <kw library="AndroidMB" name="Exist Image Exact">
 <arguments>
@@ -1474,8 +1317,8 @@ END</msg>
 <assign>
 <var>${image exist2}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:27:23.702">${image exist2} = False</msg>
-<status endtime="20170704 11:27:23.706" starttime="20170704 11:27:19.085" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:12.673">${image exist2} = False</msg>
+<status endtime="20170717 15:14:12.675" starttime="20170717 15:14:07.802" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1484,7 +1327,7 @@ END</msg>
 <arg>AndroidMB.Tap</arg>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidBlueToothDis.png</arg>
 </arguments>
-<status endtime="20170704 11:27:23.714" starttime="20170704 11:27:23.709" status="PASS"></status>
+<status endtime="20170717 15:14:12.680" starttime="20170717 15:14:12.677" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1493,7 +1336,7 @@ END</msg>
 <arg>Sleep</arg>
 <arg>1s</arg>
 </arguments>
-<status endtime="20170704 11:27:23.719" starttime="20170704 11:27:23.716" status="PASS"></status>
+<status endtime="20170717 15:14:12.683" starttime="20170717 15:14:12.681" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1502,23 +1345,23 @@ END</msg>
 <arg>AndroidMB.Tap</arg>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidCheckBox.png</arg>
 </arguments>
-<status endtime="20170704 11:27:23.723" starttime="20170704 11:27:23.721" status="PASS"></status>
+<status endtime="20170717 15:14:12.687" starttime="20170717 15:14:12.685" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:24.727">Slept 1 second</msg>
-<status endtime="20170704 11:27:24.748" starttime="20170704 11:27:23.725" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:13.691">Slept 1 second</msg>
+<status endtime="20170717 15:14:13.692" starttime="20170717 15:14:12.689" status="PASS"></status>
 </kw>
 <kw library="AndroidMB" name="Tap On Key">
 <arguments>
 <arg>HOME</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:25.764">Start
+<msg level="INFO" timestamp="20170717 15:14:14.699">Start
 END</msg>
-<status endtime="20170704 11:27:25.767" starttime="20170704 11:27:24.752" status="PASS"></status>
+<status endtime="20170717 15:14:14.700" starttime="20170717 15:14:13.693" status="PASS"></status>
 </kw>
 <kw library="HU" name="Exist Image">
 <arguments>
@@ -1527,8 +1370,8 @@ END</msg>
 <assign>
 <var>${AV image}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:27:28.893">${AV image} = False</msg>
-<status endtime="20170704 11:27:28.895" starttime="20170704 11:27:25.769" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:17.767">${AV image} = False</msg>
+<status endtime="20170717 15:14:17.768" starttime="20170717 15:14:14.701" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -1541,11 +1384,11 @@ END</msg>
 <arguments>
 <arg>14</arg>
 </arguments>
-<status endtime="20170704 11:27:29.907" starttime="20170704 11:27:28.902" status="PASS"></status>
+<status endtime="20170717 15:14:18.776" starttime="20170717 15:14:17.772" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:27:29.910" starttime="20170704 11:27:28.900" status="PASS"></status>
+<status endtime="20170717 15:14:18.777" starttime="20170717 15:14:17.770" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:27:29.912" starttime="20170704 11:27:28.897" status="PASS"></status>
+<status endtime="20170717 15:14:18.778" starttime="20170717 15:14:17.769" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -1559,10 +1402,10 @@ END</msg>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:30.919">Slept 1 second</msg>
-<status endtime="20170704 11:27:30.921" starttime="20170704 11:27:29.916" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:19.782">Slept 1 second</msg>
+<status endtime="20170717 15:14:19.783" starttime="20170717 15:14:18.781" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:27:30.923" starttime="20170704 11:27:29.914" status="PASS"></status>
+<status endtime="20170717 15:14:19.783" starttime="20170717 15:14:18.779" status="PASS"></status>
 </kw>
 <kw library="HU" name="Exist Image Exact">
 <arguments>
@@ -1571,8 +1414,8 @@ END</msg>
 <assign>
 <var>${image exist2}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:27:32.323">${image exist2} = True</msg>
-<status endtime="20170704 11:27:32.324" starttime="20170704 11:27:30.925" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:21.219">${image exist2} = True</msg>
+<status endtime="20170717 15:14:21.219" starttime="20170717 15:14:19.784" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1585,9 +1428,9 @@ END</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/CallEnaBlue.png</arg>
 </arguments>
-<status endtime="20170704 11:27:34.661" starttime="20170704 11:27:32.330" status="PASS"></status>
+<status endtime="20170717 15:14:23.778" starttime="20170717 15:14:21.232" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:27:34.663" starttime="20170704 11:27:32.327" status="PASS"></status>
+<status endtime="20170717 15:14:23.779" starttime="20170717 15:14:21.229" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1600,9 +1443,9 @@ END</msg>
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeypad</arg>
 </arguments>
-<status endtime="20170704 11:27:38.113" starttime="20170704 11:27:34.668" status="PASS"></status>
+<status endtime="20170717 15:14:27.255" starttime="20170717 15:14:23.782" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:27:38.115" starttime="20170704 11:27:34.665" status="PASS"></status>
+<status endtime="20170717 15:14:27.256" starttime="20170717 15:14:23.780" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -1610,185 +1453,185 @@ END</msg>
 <arg>${image exist2}</arg>
 <arg>Connect bluetooth</arg>
 </arguments>
-<status endtime="20170704 11:27:38.119" starttime="20170704 11:27:38.117" status="PASS"></status>
+<status endtime="20170717 15:14:27.258" starttime="20170717 15:14:27.257" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:39.123">Slept 1 second</msg>
-<status endtime="20170704 11:27:39.126" starttime="20170704 11:27:38.121" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:28.260">Slept 1 second</msg>
+<status endtime="20170717 15:14:28.261" starttime="20170717 15:14:27.259" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad0.png</arg>
 </arguments>
-<status endtime="20170704 11:27:41.640" starttime="20170704 11:27:39.128" status="PASS"></status>
+<status endtime="20170717 15:14:30.595" starttime="20170717 15:14:28.262" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:42.645">Slept 1 second</msg>
-<status endtime="20170704 11:27:42.647" starttime="20170704 11:27:41.643" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:31.598">Slept 1 second</msg>
+<status endtime="20170717 15:14:31.599" starttime="20170717 15:14:30.596" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad9.png</arg>
 </arguments>
-<status endtime="20170704 11:27:45.033" starttime="20170704 11:27:42.649" status="PASS"></status>
+<status endtime="20170717 15:14:34.137" starttime="20170717 15:14:31.601" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:46.038">Slept 1 second</msg>
-<status endtime="20170704 11:27:46.040" starttime="20170704 11:27:45.035" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:35.139">Slept 1 second</msg>
+<status endtime="20170717 15:14:35.140" starttime="20170717 15:14:34.137" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad8.png</arg>
 </arguments>
-<status endtime="20170704 11:27:48.395" starttime="20170704 11:27:46.042" status="PASS"></status>
+<status endtime="20170717 15:14:37.475" starttime="20170717 15:14:35.141" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:49.402">Slept 1 second</msg>
-<status endtime="20170704 11:27:49.404" starttime="20170704 11:27:48.399" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:38.477">Slept 1 second</msg>
+<status endtime="20170717 15:14:38.478" starttime="20170717 15:14:37.476" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad5.png</arg>
 </arguments>
-<status endtime="20170704 11:27:51.931" starttime="20170704 11:27:49.406" status="PASS"></status>
+<status endtime="20170717 15:14:40.844" starttime="20170717 15:14:38.479" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:52.936">Slept 1 second</msg>
-<status endtime="20170704 11:27:52.938" starttime="20170704 11:27:51.933" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:41.847">Slept 1 second</msg>
+<status endtime="20170717 15:14:41.848" starttime="20170717 15:14:40.846" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad6.png</arg>
 </arguments>
-<status endtime="20170704 11:27:55.310" starttime="20170704 11:27:52.940" status="PASS"></status>
+<status endtime="20170717 15:14:44.348" starttime="20170717 15:14:41.849" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:56.315">Slept 1 second</msg>
-<status endtime="20170704 11:27:56.317" starttime="20170704 11:27:55.312" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:45.351">Slept 1 second</msg>
+<status endtime="20170717 15:14:45.352" starttime="20170717 15:14:44.349" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad3</arg>
 </arguments>
-<status endtime="20170704 11:27:58.705" starttime="20170704 11:27:56.319" status="PASS"></status>
+<status endtime="20170717 15:14:47.720" starttime="20170717 15:14:45.353" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:27:59.710">Slept 1 second</msg>
-<status endtime="20170704 11:27:59.712" starttime="20170704 11:27:58.708" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:48.723">Slept 1 second</msg>
+<status endtime="20170717 15:14:48.724" starttime="20170717 15:14:47.721" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad3.png</arg>
 </arguments>
-<status endtime="20170704 11:28:02.233" starttime="20170704 11:27:59.713" status="PASS"></status>
+<status endtime="20170717 15:14:51.078" starttime="20170717 15:14:48.725" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:28:03.238">Slept 1 second</msg>
-<status endtime="20170704 11:28:03.239" starttime="20170704 11:28:02.235" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:52.081">Slept 1 second</msg>
+<status endtime="20170717 15:14:52.082" starttime="20170717 15:14:51.079" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad4.png</arg>
 </arguments>
-<status endtime="20170704 11:28:05.592" starttime="20170704 11:28:03.241" status="PASS"></status>
+<status endtime="20170717 15:14:54.628" starttime="20170717 15:14:52.083" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:28:06.597">Slept 1 second</msg>
-<status endtime="20170704 11:28:06.599" starttime="20170704 11:28:05.595" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:55.630">Slept 1 second</msg>
+<status endtime="20170717 15:14:55.631" starttime="20170717 15:14:54.629" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad6.png</arg>
 </arguments>
-<status endtime="20170704 11:28:08.970" starttime="20170704 11:28:06.601" status="PASS"></status>
+<status endtime="20170717 15:14:58.006" starttime="20170717 15:14:55.632" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:28:09.975">Slept 1 second</msg>
-<status endtime="20170704 11:28:09.977" starttime="20170704 11:28:08.972" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:14:59.009">Slept 1 second</msg>
+<status endtime="20170717 15:14:59.010" starttime="20170717 15:14:58.007" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPad9.png</arg>
 </arguments>
-<status endtime="20170704 11:28:12.541" starttime="20170704 11:28:09.979" status="PASS"></status>
+<status endtime="20170717 15:15:01.389" starttime="20170717 15:14:59.011" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:28:13.547">Slept 1 second</msg>
-<status endtime="20170704 11:28:13.548" starttime="20170704 11:28:12.545" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:15:02.392">Slept 1 second</msg>
+<status endtime="20170717 15:15:02.393" starttime="20170717 15:15:01.390" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/HUKeyPadCall.png</arg>
 </arguments>
-<status endtime="20170704 11:28:16.022" starttime="20170704 11:28:13.550" status="PASS"></status>
+<status endtime="20170717 15:15:04.918" starttime="20170717 15:15:02.394" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>8s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:28:24.029">Slept 8 seconds</msg>
-<status endtime="20170704 11:28:24.032" starttime="20170704 11:28:16.025" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:15:12.921">Slept 8 seconds</msg>
+<status endtime="20170717 15:15:12.922" starttime="20170717 15:15:04.919" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/EndCall.png</arg>
 </arguments>
-<status endtime="20170704 11:28:26.459" starttime="20170704 11:28:24.036" status="PASS"></status>
+<status endtime="20170717 15:15:15.355" starttime="20170717 15:15:12.924" status="PASS"></status>
 </kw>
-<status critical="yes" endtime="20170704 11:28:26.462" starttime="20170704 11:27:16.054" status="PASS"></status>
+<status critical="yes" endtime="20170717 15:15:15.356" starttime="20170717 15:14:04.783" status="PASS"></status>
 </test>
-<test name="Android Auto Listen To Music" id="s1-s1-t4">
+<test name="Android Auto Listen To Music" id="s1-t4">
 <kw library="Dialogs" name="Execute Manual Step">
 <doc>Pauses test execution until user sets the keyword status.</doc>
 <arguments>
 <arg>Please conect Mobile to HU And Confirm that Connection is OK</arg>
 </arguments>
-<status endtime="20170704 11:28:47.007" starttime="20170704 11:28:26.476" status="PASS"></status>
+<status endtime="20170717 15:16:17.162" starttime="20170717 15:15:15.360" status="PASS"></status>
 </kw>
 <kw library="HU" name="Exist Image">
 <arguments>
@@ -1797,8 +1640,8 @@ END</msg>
 <assign>
 <var>${AV image}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:28:50.103">${AV image} = False</msg>
-<status endtime="20170704 11:28:50.106" starttime="20170704 11:28:47.009" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:20.218">${AV image} = False</msg>
+<status endtime="20170717 15:16:20.219" starttime="20170717 15:16:17.163" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -1811,11 +1654,11 @@ END</msg>
 <arguments>
 <arg>14</arg>
 </arguments>
-<status endtime="20170704 11:28:51.122" starttime="20170704 11:28:50.113" status="PASS"></status>
+<status endtime="20170717 15:16:21.231" starttime="20170717 15:16:20.226" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:28:51.129" starttime="20170704 11:28:50.111" status="PASS"></status>
+<status endtime="20170717 15:16:21.232" starttime="20170717 15:16:20.223" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:28:51.131" starttime="20170704 11:28:50.108" status="PASS"></status>
+<status endtime="20170717 15:16:21.233" starttime="20170717 15:16:20.220" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -1829,109 +1672,109 @@ END</msg>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:28:52.138">Slept 1 second</msg>
-<status endtime="20170704 11:28:52.140" starttime="20170704 11:28:51.136" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:22.237">Slept 1 second</msg>
+<status endtime="20170717 15:16:22.238" starttime="20170717 15:16:21.235" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:28:52.142" starttime="20170704 11:28:51.133" status="PASS"></status>
+<status endtime="20170717 15:16:22.238" starttime="20170717 15:16:21.233" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/AndroidAutoIC.png</arg>
 </arguments>
-<status endtime="20170704 11:28:54.556" starttime="20170704 11:28:52.143" status="PASS"></status>
+<status endtime="20170717 15:16:24.648" starttime="20170717 15:16:22.239" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:28:55.560">Slept 1 second</msg>
-<status endtime="20170704 11:28:55.561" starttime="20170704 11:28:54.558" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:25.651">Slept 1 second</msg>
+<status endtime="20170717 15:16:25.652" starttime="20170717 15:16:24.649" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidAutoHomeIcon/AndroidAutoHomeIcon.png</arg>
 </arguments>
-<status endtime="20170704 11:28:57.870" starttime="20170704 11:28:55.564" status="PASS"></status>
+<status endtime="20170717 15:16:27.999" starttime="20170717 15:16:25.652" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:28:58.883">Slept 1 second</msg>
-<status endtime="20170704 11:28:58.885" starttime="20170704 11:28:57.881" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:29.002">Slept 1 second</msg>
+<status endtime="20170717 15:16:29.003" starttime="20170717 15:16:28.000" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/ListenMusicIcon/ListenMusicIcon.png</arg>
 </arguments>
-<status endtime="20170704 11:29:01.248" starttime="20170704 11:28:58.887" status="PASS"></status>
+<status endtime="20170717 15:16:31.312" starttime="20170717 15:16:29.004" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:02.253">Slept 1 second</msg>
-<status endtime="20170704 11:29:02.255" starttime="20170704 11:29:01.251" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:32.314">Slept 1 second</msg>
+<status endtime="20170717 15:16:32.317" starttime="20170717 15:16:31.313" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap Word Event">
 <arguments>
 <arg>Google</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:04.457">=
+<msg level="INFO" timestamp="20170717 15:16:34.451">=
 -
 Google</msg>
-<status endtime="20170704 11:29:04.459" starttime="20170704 11:29:02.257" status="PASS"></status>
+<status endtime="20170717 15:16:34.452" starttime="20170717 15:16:32.318" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:05.463">Slept 1 second</msg>
-<status endtime="20170704 11:29:05.466" starttime="20170704 11:29:04.461" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:35.454">Slept 1 second</msg>
+<status endtime="20170717 15:16:35.455" starttime="20170717 15:16:34.453" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap Text Event">
 <arguments>
 <arg>Recent activity</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:07.362">&amp; - Google Play Music
+<msg level="INFO" timestamp="20170717 15:16:37.366">&amp; - Google Play Music
 
 Instant mixes &gt;
 
 Recent activity &gt;</msg>
-<status endtime="20170704 11:29:07.364" starttime="20170704 11:29:05.468" status="PASS"></status>
+<status endtime="20170717 15:16:37.367" starttime="20170717 15:16:35.455" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:08.371">Slept 1 second</msg>
-<status endtime="20170704 11:29:08.373" starttime="20170704 11:29:07.368" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:38.369">Slept 1 second</msg>
+<status endtime="20170717 15:16:38.370" starttime="20170717 15:16:37.368" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap Text Event">
 <arguments>
 <arg>${SongName}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:10.530">&amp; - Recent activity &amp;
+<msg level="INFO" timestamp="20170717 15:16:40.700">&amp; - Recent activity &amp;
 
 Shuffle all
 
-© Shuffle on device music
+a Shuffle on device music
 
 l Ngo Thuy Mien</msg>
-<status endtime="20170704 11:29:10.543" starttime="20170704 11:29:08.376" status="PASS"></status>
+<status endtime="20170717 15:16:40.701" starttime="20170717 15:16:38.370" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:12.549">Slept 2 seconds</msg>
-<status endtime="20170704 11:29:12.551" starttime="20170704 11:29:10.547" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:42.703">Slept 2 seconds</msg>
+<status endtime="20170717 15:16:42.704" starttime="20170717 15:16:40.702" status="PASS"></status>
 </kw>
 <kw library="HU" name="Exist Image Exact">
 <arguments>
@@ -1940,16 +1783,16 @@ l Ngo Thuy Mien</msg>
 <assign>
 <var>${image exists}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:29:15.987">${image exists} = False</msg>
-<status endtime="20170704 11:29:15.988" starttime="20170704 11:29:12.553" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:46.347">${image exists} = False</msg>
+<status endtime="20170717 15:16:46.347" starttime="20170717 15:16:42.704" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${image exists}</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:15.993">False</msg>
-<status endtime="20170704 11:29:16.000" starttime="20170704 11:29:15.991" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:46.350">False</msg>
+<status endtime="20170717 15:16:46.352" starttime="20170717 15:16:46.348" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword If">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1958,67 +1801,137 @@ l Ngo Thuy Mien</msg>
 <arg>HU.A Tap Event</arg>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/PlayBTN.png</arg>
 </arguments>
-<status endtime="20170704 11:29:16.005" starttime="20170704 11:29:16.002" status="PASS"></status>
+<status endtime="20170717 15:16:46.355" starttime="20170717 15:16:46.353" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg level="INFO" timestamp="20170717 15:16:47.357">Slept 1 second</msg>
+<status endtime="20170717 15:16:47.358" starttime="20170717 15:16:46.356" status="PASS"></status>
+</kw>
+<kw library="HU" name="Exist Image Exact">
+<arguments>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/PauseBTN.png</arg>
+</arguments>
+<assign>
+<var>${image exists}</var>
+</assign>
+<msg level="INFO" timestamp="20170717 15:16:48.791">${image exists} = True</msg>
+<status endtime="20170717 15:16:48.791" starttime="20170717 15:16:47.359" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${image exists}</arg>
+<arg>Sucess And Capture</arg>
+<arg>Playing song ${SongName}</arg>
+</arguments>
+<kw name="Sucess And Capture">
+<arguments>
+<arg>Playing song ${SongName}</arg>
+</arguments>
+<kw library="OperatingSystem" name="Create Directory">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/OutputResources</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20170717 15:16:48.800">Directory '&lt;a href="file://C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\OutputResources"&gt;C:\Users\tuanhq\projects\java\SikuliX-2014\HUAutomation\OutputResources&lt;/a&gt;' already exists.</msg>
+<status endtime="20170717 15:16:48.801" starttime="20170717 15:16:48.797" status="PASS"></status>
+</kw>
+<kw library="HU" name="Capture Screen And Return File Name">
+<arguments>
+<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/OutputResources</arg>
+<arg>${TEST NAME}</arg>
+</arguments>
+<assign>
+<var>${image name}</var>
+</assign>
+<msg level="INFO" timestamp="20170717 15:16:49.432">${image name} = Android Auto Listen To Music-1500279409350.png</msg>
+<status endtime="20170717 15:16:49.433" starttime="20170717 15:16:48.801" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${message} &lt;img src="OutputResources/${image name}" alt="${message}"/&gt;</arg>
+<arg>HTML</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20170717 15:16:49.437">Playing song Ngo Thuy Mien &lt;img src="OutputResources/Android Auto Listen To Music-1500279409350.png" alt="Playing song Ngo Thuy Mien"/&gt;</msg>
+<status endtime="20170717 15:16:49.438" starttime="20170717 15:16:49.434" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:16:49.439" starttime="20170717 15:16:48.795" status="PASS"></status>
+</kw>
+<status endtime="20170717 15:16:49.440" starttime="20170717 15:16:48.792" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Run Keyword Unless">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>${image exists}</arg>
+<arg>Fail And Capture</arg>
+<arg>Not playing song ${SongName}</arg>
+</arguments>
+<status endtime="20170717 15:16:49.444" starttime="20170717 15:16:49.441" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:26.009">Slept 10 seconds</msg>
-<status endtime="20170704 11:29:26.011" starttime="20170704 11:29:16.007" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:16:59.447">Slept 10 seconds</msg>
+<status endtime="20170717 15:16:59.448" starttime="20170717 15:16:49.445" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/NextBTN.png</arg>
 </arguments>
-<status endtime="20170704 11:29:28.380" starttime="20170704 11:29:26.013" status="PASS"></status>
+<status endtime="20170717 15:17:01.867" starttime="20170717 15:16:59.448" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:38.385">Slept 10 seconds</msg>
-<status endtime="20170704 11:29:38.387" starttime="20170704 11:29:28.383" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:17:11.870">Slept 10 seconds</msg>
+<status endtime="20170717 15:17:11.871" starttime="20170717 15:17:01.869" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/NextBTN.png</arg>
 </arguments>
-<status endtime="20170704 11:29:40.771" starttime="20170704 11:29:38.389" status="PASS"></status>
+<status endtime="20170717 15:17:14.277" starttime="20170717 15:17:11.871" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:29:50.780">Slept 10 seconds</msg>
-<status endtime="20170704 11:29:50.782" starttime="20170704 11:29:40.775" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:17:24.290">Slept 10 seconds</msg>
+<status endtime="20170717 15:17:24.291" starttime="20170717 15:17:14.289" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/PrevButton.png</arg>
 </arguments>
-<status endtime="20170704 11:29:53.249" starttime="20170704 11:29:50.784" status="PASS"></status>
+<status endtime="20170717 15:17:26.753" starttime="20170717 15:17:24.292" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:30:03.253">Slept 10 seconds</msg>
-<status endtime="20170704 11:30:03.255" starttime="20170704 11:29:53.251" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:17:36.755">Slept 10 seconds</msg>
+<status endtime="20170717 15:17:36.756" starttime="20170717 15:17:26.754" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/PrevButton.png</arg>
 </arguments>
-<status endtime="20170704 11:30:05.723" starttime="20170704 11:30:03.257" status="PASS"></status>
+<status endtime="20170717 15:17:39.249" starttime="20170717 15:17:36.757" status="PASS"></status>
 </kw>
-<status critical="yes" endtime="20170704 11:30:05.726" starttime="20170704 11:28:26.466" status="PASS"></status>
+<status critical="yes" endtime="20170717 15:17:39.252" starttime="20170717 15:15:15.358" status="PASS"></status>
 </test>
-<test name="Android Auto Navi" id="s1-s1-t5">
+<test name="Android Auto Navi" id="s1-t5">
 <kw library="HU" name="Exist Image">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/AVAppIcon.png</arg>
@@ -2026,8 +1939,8 @@ l Ngo Thuy Mien</msg>
 <assign>
 <var>${AV image}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:30:09.074">${AV image} = False</msg>
-<status endtime="20170704 11:30:09.077" starttime="20170704 11:30:05.735" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:17:42.704">${AV image} = False</msg>
+<status endtime="20170717 15:17:42.704" starttime="20170717 15:17:39.256" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -2040,11 +1953,11 @@ l Ngo Thuy Mien</msg>
 <arguments>
 <arg>14</arg>
 </arguments>
-<status endtime="20170704 11:30:10.089" starttime="20170704 11:30:09.084" status="PASS"></status>
+<status endtime="20170717 15:17:43.713" starttime="20170717 15:17:42.708" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:30:10.092" starttime="20170704 11:30:09.081" status="PASS"></status>
+<status endtime="20170717 15:17:43.714" starttime="20170717 15:17:42.707" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:30:10.096" starttime="20170704 11:30:09.079" status="PASS"></status>
+<status endtime="20170717 15:17:43.714" starttime="20170717 15:17:42.705" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -2058,689 +1971,82 @@ l Ngo Thuy Mien</msg>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:30:11.103">Slept 1 second</msg>
-<status endtime="20170704 11:30:11.104" starttime="20170704 11:30:10.101" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:17:44.718">Slept 1 second</msg>
+<status endtime="20170717 15:17:44.719" starttime="20170717 15:17:43.716" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:30:11.106" starttime="20170704 11:30:10.098" status="PASS"></status>
+<status endtime="20170717 15:17:44.719" starttime="20170717 15:17:43.715" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/AndroidAutoIC.png</arg>
 </arguments>
-<status endtime="20170704 11:30:13.555" starttime="20170704 11:30:11.108" status="PASS"></status>
+<status endtime="20170717 15:17:47.166" starttime="20170717 15:17:44.720" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:30:14.560">Slept 1 second</msg>
-<status endtime="20170704 11:30:14.561" starttime="20170704 11:30:13.557" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:17:48.168">Slept 1 second</msg>
+<status endtime="20170717 15:17:48.169" starttime="20170717 15:17:47.167" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidAutoHomeIcon/AndroidAutoHomeIcon.png</arg>
 </arguments>
-<status endtime="20170704 11:30:17.022" starttime="20170704 11:30:14.564" status="PASS"></status>
+<status endtime="20170717 15:17:50.590" starttime="20170717 15:17:48.169" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:30:18.026">Slept 1 second</msg>
-<status endtime="20170704 11:30:18.028" starttime="20170704 11:30:17.025" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:17:51.592">Slept 1 second</msg>
+<status endtime="20170717 15:17:51.593" starttime="20170717 15:17:50.591" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/NaviIcon.png</arg>
 </arguments>
-<status endtime="20170704 11:30:20.341" starttime="20170704 11:30:18.030" status="PASS"></status>
+<status endtime="20170717 15:17:53.943" starttime="20170717 15:17:51.594" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:30:21.345">Slept 1 second</msg>
-<status endtime="20170704 11:30:21.347" starttime="20170704 11:30:20.343" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:17:54.946">Slept 1 second</msg>
+<status endtime="20170717 15:17:54.947" starttime="20170717 15:17:53.944" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/GGMapSearch.png</arg>
 </arguments>
-<status endtime="20170704 11:30:23.784" starttime="20170704 11:30:21.348" status="PASS"></status>
+<status endtime="20170717 15:17:59.041" starttime="20170717 15:17:54.948" status="PASS"></status>
 </kw>
 <kw library="HU" name="Type Text Search">
 <arguments>
 <arg>${dest address}</arg>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/HU/keyboard</arg>
 </arguments>
-<status endtime="20170704 11:30:59.748" starttime="20170704 11:30:23.786" status="PASS"></status>
+<status endtime="20170717 15:18:35.703" starttime="20170717 15:17:59.043" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/HU/keyboard/KeySearch.png</arg>
 </arguments>
-<status endtime="20170704 11:31:02.070" starttime="20170704 11:30:59.752" status="PASS"></status>
+<status endtime="20170717 15:18:38.103" starttime="20170717 15:18:35.705" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event Exact">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/direct.png</arg>
 </arguments>
-<status endtime="20170704 11:31:05.719" starttime="20170704 11:31:02.072" status="PASS"></status>
+<msg level="FAIL" timestamp="20170717 15:18:41.670">FindFailed: C:/Users/tuanhq/projects/java/SikuliX-2014/HUAutomation/Images/Phone/direct.png: (72x61) in ADBScreen: Android device: 0123456789ABCDEF (800 x 480)</msg>
+<status endtime="20170717 15:18:41.672" starttime="20170717 15:18:38.104" status="FAIL"></status>
 </kw>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/UpArrow.png</arg>
-</arguments>
-<status endtime="20170704 11:31:08.340" starttime="20170704 11:31:05.721" status="PASS"></status>
-</kw>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrow.png</arg>
-</arguments>
-<status endtime="20170704 11:31:10.799" starttime="20170704 11:31:08.344" status="PASS"></status>
-</kw>
-<kw type="for" name="${i} IN RANGE [ 99 ]">
-<kw type="foritem" name="${i} = 0">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:12.475">${image exist} = True</msg>
-<status endtime="20170704 11:31:12.476" starttime="20170704 11:31:10.807" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:14.863" starttime="20170704 11:31:12.484" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:14.865" starttime="20170704 11:31:12.481" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:14.870" starttime="20170704 11:31:14.868" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:14.872" starttime="20170704 11:31:10.805" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 1">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:16.297">${image exist} = True</msg>
-<status endtime="20170704 11:31:16.298" starttime="20170704 11:31:14.875" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:18.904" starttime="20170704 11:31:16.303" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:18.906" starttime="20170704 11:31:16.300" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:18.913" starttime="20170704 11:31:18.908" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:18.915" starttime="20170704 11:31:14.874" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 2">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:20.404">${image exist} = True</msg>
-<status endtime="20170704 11:31:20.407" starttime="20170704 11:31:18.918" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:22.755" starttime="20170704 11:31:20.416" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:22.757" starttime="20170704 11:31:20.411" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:22.761" starttime="20170704 11:31:22.759" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:22.762" starttime="20170704 11:31:18.917" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 3">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:24.220">${image exist} = True</msg>
-<status endtime="20170704 11:31:24.221" starttime="20170704 11:31:22.766" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:26.616" starttime="20170704 11:31:24.226" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:26.618" starttime="20170704 11:31:24.223" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:26.622" starttime="20170704 11:31:26.620" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:26.624" starttime="20170704 11:31:22.764" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 4">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:28.180">${image exist} = True</msg>
-<status endtime="20170704 11:31:28.182" starttime="20170704 11:31:26.627" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:30.684" starttime="20170704 11:31:28.191" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:30.690" starttime="20170704 11:31:28.186" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:30.701" starttime="20170704 11:31:30.696" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:30.703" starttime="20170704 11:31:26.626" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 5">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:32.120">${image exist} = True</msg>
-<status endtime="20170704 11:31:32.122" starttime="20170704 11:31:30.707" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:34.586" starttime="20170704 11:31:32.132" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:34.588" starttime="20170704 11:31:32.124" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:34.592" starttime="20170704 11:31:34.590" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:34.594" starttime="20170704 11:31:30.705" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 6">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:36.098">${image exist} = True</msg>
-<status endtime="20170704 11:31:36.099" starttime="20170704 11:31:34.597" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:38.437" starttime="20170704 11:31:36.121" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:38.440" starttime="20170704 11:31:36.119" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:38.444" starttime="20170704 11:31:38.442" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:38.445" starttime="20170704 11:31:34.595" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 7">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:39.906">${image exist} = True</msg>
-<status endtime="20170704 11:31:39.907" starttime="20170704 11:31:38.448" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:42.355" starttime="20170704 11:31:39.915" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:42.359" starttime="20170704 11:31:39.910" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:42.364" starttime="20170704 11:31:42.361" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:42.365" starttime="20170704 11:31:38.447" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 8">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:43.905">${image exist} = True</msg>
-<status endtime="20170704 11:31:43.907" starttime="20170704 11:31:42.368" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:46.302" starttime="20170704 11:31:43.912" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:46.304" starttime="20170704 11:31:43.909" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:46.322" starttime="20170704 11:31:46.320" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:46.323" starttime="20170704 11:31:42.367" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 9">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:47.750">${image exist} = True</msg>
-<status endtime="20170704 11:31:47.751" starttime="20170704 11:31:46.326" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:50.244" starttime="20170704 11:31:47.756" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:50.246" starttime="20170704 11:31:47.753" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:50.250" starttime="20170704 11:31:50.248" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:50.251" starttime="20170704 11:31:46.325" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 10">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:51.672">${image exist} = True</msg>
-<status endtime="20170704 11:31:51.685" starttime="20170704 11:31:50.254" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:54.097" starttime="20170704 11:31:51.711" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:54.099" starttime="20170704 11:31:51.707" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:54.103" starttime="20170704 11:31:54.101" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:54.104" starttime="20170704 11:31:50.253" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 11">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:55.616">${image exist} = True</msg>
-<status endtime="20170704 11:31:55.617" starttime="20170704 11:31:54.108" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:31:58.013" starttime="20170704 11:31:55.622" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:58.015" starttime="20170704 11:31:55.619" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:31:58.018" starttime="20170704 11:31:58.017" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:31:58.020" starttime="20170704 11:31:54.106" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 12">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:31:59.774">${image exist} = True</msg>
-<status endtime="20170704 11:31:59.778" starttime="20170704 11:31:58.023" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:32:02.218" starttime="20170704 11:31:59.785" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:02.220" starttime="20170704 11:31:59.781" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:32:02.223" starttime="20170704 11:32:02.222" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:02.225" starttime="20170704 11:31:58.021" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 13">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:32:03.626">${image exist} = True</msg>
-<status endtime="20170704 11:32:03.629" starttime="20170704 11:32:02.227" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:32:06.012" starttime="20170704 11:32:03.634" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:06.014" starttime="20170704 11:32:03.631" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:32:06.018" starttime="20170704 11:32:06.015" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:06.019" starttime="20170704 11:32:02.226" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 14">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:32:07.452">${image exist} = True</msg>
-<status endtime="20170704 11:32:07.453" starttime="20170704 11:32:06.026" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:32:09.880" starttime="20170704 11:32:07.458" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:09.884" starttime="20170704 11:32:07.455" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<status endtime="20170704 11:32:09.887" starttime="20170704 11:32:09.885" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:09.888" starttime="20170704 11:32:06.021" status="PASS"></status>
-</kw>
-<kw type="foritem" name="${i} = 15">
-<kw library="HU" name="Exist Image Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<assign>
-<var>${image exist}</var>
-</assign>
-<msg level="INFO" timestamp="20170704 11:32:13.538">${image exist} = False</msg>
-<status endtime="20170704 11:32:13.539" starttime="20170704 11:32:09.892" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword If">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>HU.A Tap Event Exact</arg>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/RightArrowBlack.png</arg>
-</arguments>
-<status endtime="20170704 11:32:13.543" starttime="20170704 11:32:13.541" status="PASS"></status>
-</kw>
-<kw library="BuiltIn" name="Run Keyword Unless">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
-<arguments>
-<arg>${image exist}</arg>
-<arg>Exit For Loop</arg>
-</arguments>
-<kw library="BuiltIn" name="Exit For Loop">
-<doc>Stops executing the enclosing for loop.</doc>
-<msg level="INFO" timestamp="20170704 11:32:13.548">Exiting for loop altogether.</msg>
-<status endtime="20170704 11:32:13.550" starttime="20170704 11:32:13.547" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:13.551" starttime="20170704 11:32:13.545" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:13.562" starttime="20170704 11:32:09.890" status="PASS"></status>
-</kw>
-<status endtime="20170704 11:32:13.564" starttime="20170704 11:31:10.802" status="PASS"></status>
-</kw>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/Recenter.png</arg>
-</arguments>
-<status endtime="20170704 11:32:16.689" starttime="20170704 11:32:13.566" status="PASS"></status>
-</kw>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/Recenter.png</arg>
-</arguments>
-<status endtime="20170704 11:32:19.242" starttime="20170704 11:32:16.693" status="PASS"></status>
-</kw>
-<kw library="HU" name="A Tap Event Exact">
-<arguments>
-<arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/CloseGGMap.png</arg>
-</arguments>
-<status endtime="20170704 11:32:21.588" starttime="20170704 11:32:19.244" status="PASS"></status>
-</kw>
-<status critical="yes" endtime="20170704 11:32:21.590" starttime="20170704 11:30:05.730" status="PASS"></status>
+<status critical="yes" endtime="20170717 15:18:41.674" starttime="20170717 15:17:39.254" status="FAIL">FindFailed: C:/Users/tuanhq/projects/java/SikuliX-2014/HUAutomation/Images/Phone/direct.png: (72x61) in ADBScreen: Android device: 0123456789ABCDEF (800 x 480)</status>
 </test>
-<test name="Android Auto Call" id="s1-s1-t6">
+<test name="Android Auto Call" id="s1-t6">
 <kw library="HU" name="Exist Image">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/AVAppIcon.png</arg>
@@ -2748,8 +2054,8 @@ l Ngo Thuy Mien</msg>
 <assign>
 <var>${AV image}</var>
 </assign>
-<msg level="INFO" timestamp="20170704 11:32:25.013">${AV image} = False</msg>
-<status endtime="20170704 11:32:25.016" starttime="20170704 11:32:21.596" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:18:45.018">${AV image} = False</msg>
+<status endtime="20170717 15:18:45.019" starttime="20170717 15:18:41.678" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -2762,11 +2068,11 @@ l Ngo Thuy Mien</msg>
 <arguments>
 <arg>14</arg>
 </arguments>
-<status endtime="20170704 11:32:26.041" starttime="20170704 11:32:25.022" status="PASS"></status>
+<status endtime="20170717 15:18:46.027" starttime="20170717 15:18:45.023" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:32:26.043" starttime="20170704 11:32:25.020" status="PASS"></status>
+<status endtime="20170717 15:18:46.029" starttime="20170717 15:18:45.021" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:32:26.045" starttime="20170704 11:32:25.018" status="PASS"></status>
+<status endtime="20170717 15:18:46.029" starttime="20170717 15:18:45.019" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword Unless">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
@@ -2780,159 +2086,156 @@ l Ngo Thuy Mien</msg>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:27.051">Slept 1 second</msg>
-<status endtime="20170704 11:32:27.054" starttime="20170704 11:32:26.049" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:18:47.033">Slept 1 second</msg>
+<status endtime="20170717 15:18:47.034" starttime="20170717 15:18:46.032" status="PASS"></status>
 </kw>
-<status endtime="20170704 11:32:27.056" starttime="20170704 11:32:26.047" status="PASS"></status>
+<status endtime="20170717 15:18:47.034" starttime="20170717 15:18:46.030" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Settings/AndroidAutoIC.png</arg>
 </arguments>
-<status endtime="20170704 11:32:29.521" starttime="20170704 11:32:27.058" status="PASS"></status>
+<status endtime="20170717 15:18:49.504" starttime="20170717 15:18:47.035" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:30.527">Slept 1 second</msg>
-<status endtime="20170704 11:32:30.528" starttime="20170704 11:32:29.525" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:18:50.507">Slept 1 second</msg>
+<status endtime="20170717 15:18:50.508" starttime="20170717 15:18:49.505" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidAutoHomeIcon/AndroidAutoHomeIcon.png</arg>
 </arguments>
-<status endtime="20170704 11:32:32.891" starttime="20170704 11:32:30.530" status="PASS"></status>
+<status endtime="20170717 15:18:53.057" starttime="20170717 15:18:50.509" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:33.895">Slept 1 second</msg>
-<status endtime="20170704 11:32:33.896" starttime="20170704 11:32:32.893" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:18:54.059">Slept 1 second</msg>
+<status endtime="20170717 15:18:54.060" starttime="20170717 15:18:53.058" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidAutoCallIcon.png</arg>
 </arguments>
-<status endtime="20170704 11:32:36.472" starttime="20170704 11:32:33.898" status="PASS"></status>
+<status endtime="20170717 15:18:56.620" starttime="20170717 15:18:54.062" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:37.476">Slept 1 second</msg>
-<status endtime="20170704 11:32:37.478" starttime="20170704 11:32:36.474" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:18:57.623">Slept 1 second</msg>
+<status endtime="20170717 15:18:57.624" starttime="20170717 15:18:56.621" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap Word Event">
 <arguments>
 <arg>Phone</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:39.416">=
+<msg level="INFO" timestamp="20170717 15:18:59.470">=
 Phone</msg>
-<status endtime="20170704 11:32:39.418" starttime="20170704 11:32:37.479" status="PASS"></status>
+<status endtime="20170717 15:18:59.472" starttime="20170717 15:18:57.624" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:40.421">Slept 1 second</msg>
-<status endtime="20170704 11:32:40.422" starttime="20170704 11:32:39.420" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:19:00.473">Slept 1 second</msg>
+<status endtime="20170717 15:19:00.474" starttime="20170717 15:18:59.472" status="PASS"></status>
 </kw>
 <kw library="HU" name="Tap Word Event">
 <arguments>
 <arg>number</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:42.450">&amp;
+<msg level="INFO" timestamp="20170717 15:19:02.459">&amp;
 -
 Phone
-"A4
 B
-11:32
+1518
 §§E
 Dial
 a
 number</msg>
-<status endtime="20170704 11:32:42.452" starttime="20170704 11:32:40.424" status="PASS"></status>
+<status endtime="20170717 15:19:02.461" starttime="20170717 15:19:00.474" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:43.455">Slept 1 second</msg>
-<status endtime="20170704 11:32:43.457" starttime="20170704 11:32:42.454" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:19:03.464">Slept 1 second</msg>
+<status endtime="20170717 15:19:03.465" starttime="20170717 15:19:02.462" status="PASS"></status>
 </kw>
 <kw library="HU" name="Long Press Target">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidAutoKeyPad/KeyDel.png</arg>
 <arg>2000</arg>
 </arguments>
-<status endtime="20170704 11:32:47.821" starttime="20170704 11:32:43.459" status="PASS"></status>
+<status endtime="20170717 15:19:07.801" starttime="20170717 15:19:03.465" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:32:48.827">Slept 1 second</msg>
-<status endtime="20170704 11:32:48.828" starttime="20170704 11:32:47.825" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:19:08.803">Slept 1 second</msg>
+<status endtime="20170717 15:19:08.804" starttime="20170717 15:19:07.802" status="PASS"></status>
 </kw>
 <kw library="HU" name="Type Number Call">
 <arguments>
 <arg>${number call}</arg>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidAutoKeyPad</arg>
 </arguments>
-<status endtime="20170704 11:33:13.081" starttime="20170704 11:32:48.830" status="PASS"></status>
+<status endtime="20170717 15:19:33.077" starttime="20170717 15:19:08.804" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:33:14.086">Slept 1 second</msg>
-<status endtime="20170704 11:33:14.087" starttime="20170704 11:33:13.084" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:19:34.080">Slept 1 second</msg>
+<status endtime="20170717 15:19:34.081" starttime="20170717 15:19:33.078" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidAutoKeyPad/KeyCall.png</arg>
 </arguments>
-<status endtime="20170704 11:33:16.454" starttime="20170704 11:33:14.089" status="PASS"></status>
+<status endtime="20170717 15:19:36.433" starttime="20170717 15:19:34.082" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Sleep">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg level="INFO" timestamp="20170704 11:33:21.459">Slept 5 seconds</msg>
-<status endtime="20170704 11:33:21.461" starttime="20170704 11:33:16.456" status="PASS"></status>
+<msg level="INFO" timestamp="20170717 15:19:41.436">Slept 5 seconds</msg>
+<status endtime="20170717 15:19:41.437" starttime="20170717 15:19:36.434" status="PASS"></status>
 </kw>
 <kw library="HU" name="A Tap Event">
 <arguments>
 <arg>C:\\Users\\tuanhq\\projects\\java\\SikuliX-2014\\HUAutomation/Images/Phone/AndroidAutoKeyPad/KeyEndCall.png</arg>
 </arguments>
-<status endtime="20170704 11:33:23.788" starttime="20170704 11:33:21.462" status="PASS"></status>
+<msg level="FAIL" timestamp="20170717 15:19:44.740">FindFailed: C:/Users/tuanhq/projects/java/SikuliX-2014/HUAutomation/Images/Phone/AndroidAutoKeyPad/KeyEndCall.png: (122x103) in ADBScreen: Android device: 0123456789ABCDEF (800 x 480)</msg>
+<status endtime="20170717 15:19:44.741" starttime="20170717 15:19:41.437" status="FAIL"></status>
 </kw>
-<status critical="yes" endtime="20170704 11:33:23.790" starttime="20170704 11:32:21.593" status="PASS"></status>
+<status critical="yes" endtime="20170717 15:19:44.742" starttime="20170717 15:18:41.675" status="FAIL">FindFailed: C:/Users/tuanhq/projects/java/SikuliX-2014/HUAutomation/Images/Phone/AndroidAutoKeyPad/KeyEndCall.png: (122x103) in ADBScreen: Android device: 0123456789ABCDEF (800 x 480)</status>
 </test>
-<status endtime="20170704 11:33:23.796" starttime="20170704 11:24:52.612" status="FAIL"></status>
-</suite>
-<status endtime="20170704 11:33:23.822" starttime="20170704 11:24:52.198" status="FAIL"></status>
+<status endtime="20170717 15:19:44.751" starttime="20170717 15:11:57.038" status="FAIL"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="1">Critical Tests</stat>
-<stat pass="5" fail="1">All Tests</stat>
+<stat pass="2" fail="4">Critical Tests</stat>
+<stat pass="2" fail="4">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="1" name="HUAutomation" id="s1">HUAutomation</stat>
-<stat pass="5" fail="1" name="HUAutomation" id="s1-s1">HUAutomation.HUAutomation</stat>
+<stat pass="2" fail="4" name="HUAutomation" id="s1">HUAutomation</stat>
 </suite>
 </statistics>
 <errors>

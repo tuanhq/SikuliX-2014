@@ -32,11 +32,15 @@ Change Setting
     Wait Until Keyword Succeeds    3s    1s    HU.Tap Text     Firmware Information
     Wait Until Keyword Succeeds    3s    1s    HU.Long Press Target     ${CURDIR}/Images/Settings/FirmwareTitle/FirmwareTitle2.png    4000
     ${firmware version} =    Wait Until Keyword Succeeds    5s    1s    HU.Read Text Right Image     ${CURDIR}/Images/Settings/FirmwareText/Firmware.jpg
-    Log  ${firmware version}  
-    Run Keyword And Continue On Failure    Should Contain    ${firmware version}    1.040000
+    Log    Firmware verion: ${firmware version}
+    Sucess And Capture    Firmware version matches with 1.040000
+    #Run Keyword Unless    "${firmware version}" == 1.040000    Fail And Capture    Firmware version don't matches with 1.040000
+    
+    
     ${Data version} =    Wait Until Keyword Succeeds    5s    1s    HU.Read Text Right     Platform
-    Log  ${Data version}  
-    Run Keyword And Continue On Failure    Should Contain    ${Data version}    1.040000
+    #Run Keyword If    "${Data version}" == 1.040000    Sucess And Capture    Data version matches with 1.040000
+    Log    Dataverion : ${Data version} 
+    Run Keyword And Continue On Failure    Fail And Capture    Data version don't matches with 1.040000234
     
     Wait Until Keyword Succeeds    5s    1s    HU.Tap Colllection     ${CURDIR}/Images/Settings/ThemeBTN
     Wait Until Keyword Succeeds    3s    1s    HU.Tap     ${CURDIR}/Images/Settings/Clock.jpg
@@ -52,6 +56,8 @@ Change Setting
     :FOR    ${i}    IN RANGE    1    4
     \    sleep    2s
     \    HU.A Swipe Down From    ${CURDIR}/Images/Settings/Scroolbar.png
+    Sleep    1s
+    HU.Tap    ${CURDIR}/Images/Settings/CloseBTN.png
 Press Eject Icon  
 	Press Eject Icon    ${CURDIR}/Images/Settings/DVDEJ.png	
 	Press Eject Icon    ${CURDIR}/Images/Settings/DVDEJ2.png	
@@ -63,6 +69,7 @@ Press Eject Icon
     Run Keyword Unless    ${image exist}    Sleep    1s 
     Run Keyword Unless    ${image exist}    Press Inc Or Dec Angle
 Call Via Bluetooth
+    
     AndroidMB.Tap On Key    HOME
     Sleep    1s
     AndroidMB.A Swipe Down From Top   
@@ -125,6 +132,11 @@ Android Auto Listen To Music
     ${image exists} =    HU.Exist Image Exact    ${CURDIR}/Images/Phone/PlayBTN.png
     Log    ${image exists} 
     Run Keyword If    ${image exists}    HU.A Tap Event    ${CURDIR}/Images/Phone/PlayBTN.png
+    Sleep    1s    
+    ${image exists} =    HU.Exist Image Exact    ${CURDIR}/Images/Phone/PauseBTN.png
+    Run Keyword If    ${image exists}    Sucess And Capture    Playing song ${SongName}
+    Run Keyword Unless    ${image exists}    Fail And Capture    Not playing song ${SongName}
+    
     Sleep    10s 
     
     HU.A Tap Event    ${CURDIR}/Images/Phone/NextBTN.png
@@ -154,10 +166,15 @@ Android Auto Navi
     HU.A Tap Event Exact    ${CURDIR}/Images/Phone/RightArrow.png
     :FOR    ${i}    IN RANGE    99
     \    ${image exist}=    HU.Exist Image Exact    ${CURDIR}/Images/Phone/RightArrowBlack.png
+    \    Run Keyword If    ${image exist}    Sucess And Capture    route info        
     \    Run Keyword If    ${image exist}    HU.A Tap Event Exact     ${CURDIR}/Images/Phone/RightArrowBlack.png
     \    Run Keyword Unless    ${image exist}    Exit For Loop
+    Sleep    1s
     HU.A Tap Event Exact    ${CURDIR}/Images/Phone/Recenter.png
-    HU.A Tap Event Exact    ${CURDIR}/Images/Phone/Recenter.png
+    Sleep    1s
+    ${image exist}=    HU.Exist Image Exact    ${CURDIR}/Images/Phone/Recenter.png
+    Run Keyword If    ${image exist}    HU.Exist Image Exact    ${CURDIR}/Images/Phone/Recenter.png
+    Sleep    1s
     HU.A Tap Event Exact    ${CURDIR}/Images/Phone/CloseGGMap.png
 Android Auto Call
     ${AV image} =    HU.Exist Image    ${CURDIR}/Images/Settings/AVAppIcon.png
@@ -180,8 +197,7 @@ Android Auto Call
     HU.A Tap Event    ${CURDIR}/Images/Phone/AndroidAutoKeyPad/KeyCall.png  
     Sleep    5s
     HU.A Tap Event    ${CURDIR}/Images/Phone/AndroidAutoKeyPad/KeyEndCall.png      
-    
-    
+
        
              
             
@@ -204,17 +220,26 @@ Press Inc Or Dec Angle
 
 Press Eject Icon
    [Arguments]    ${image path}
+   Log    start ${image path}
    ${image exist}=    HU.Exist Image     ${image path}
-   Run Keyword If    ${image exist}    Wait Until Keyword Succeeds    3s    1s    HU.Tap     ${image path}
-   Run Keyword If    ${image exist}    Sleep    1s    
-   Run Keyword If    ${image exist}    HU.Press Hard Key     13
+   Run Keyword If    ${image exist}    HU.Tap     ${image path}
    Run Keyword If    ${image exist}    Sleep    1s
+   Run Keyword If    ${image exist}    Log    if true start press hard key    
+   Run Keyword If    ${image exist}    HU.Press Hard Key     13
+   Run Keyword If    ${image exist}    Log    if true end press hard key
+   Run Keyword If    ${image exist}    Sleep    1s
+   Run Keyword Unless    ${image exist}    Log    if false start press hard key  
    Run Keyword Unless    ${image exist}    HU.Press Hard Key    13
+   Run Keyword Unless    ${image exist}    Log    if false end press hard key 
    Run Keyword Unless    ${image exist}    Sleep    1s
-   Run Keyword Unless    ${image exist}    Wait Until Keyword Succeeds    3s    1s    HU.Tap    ${image path}
+   Run Keyword Unless    ${image exist}    HU.Tap    ${image path}
    Run Keyword Unless    ${image exist}    Sleep    1s
+   Run Keyword Unless    ${image exist}    Log    if false start press hard key 2nd
+   
    Run Keyword Unless    ${image exist}    HU.Press Hard Key     13
+   Run Keyword Unless    ${image exist}    Log    if false end press hard key 2nd
    Run Keyword Unless    ${image exist}    Sleep    1s 
+   Log    end ${image path}
     
 Press Hardkey Home
     HU.Press Hard Key     14
@@ -225,8 +250,13 @@ Tap SouceOff
 Fail And Capture
     [Arguments]    ${message}
     Create Directory    ${CURDIR}/OutputResources
-    ${image name} =    Wait Until Keyword Succeeds    3s    1s    HU.Capture Screen And Return File Name  0123456789ABCDEF    ${CURDIR}/OutputResources    ${TEST NAME}
+    ${image name} =    HU.Capture Screen And Return File Name    ${CURDIR}/OutputResources    ${TEST NAME}
     Fail     *HTML*${message} <img src="OutputResources/${image name}" alt="${message}"/>
+Sucess And Capture
+    [Arguments]    ${message}
+    Create Directory    ${CURDIR}/OutputResources
+    ${image name} =    HU.Capture Screen And Return File Name    ${CURDIR}/OutputResources    ${TEST NAME}
+    Log     ${message} <img src="OutputResources/${image name}" alt="${message}"/>    HTML
 Tap A Location And Exit For
     [Arguments]    ${location}
     #Log    ${location.x} : ${location.y}

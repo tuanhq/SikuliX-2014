@@ -8,11 +8,11 @@ public class Test {
 		
 		String testResourcesDataPath = "src/test/resources/test-data";
 		ITesseract instance;
-		instance = new Tesseract();
+		instance = new Tesseract1();
 		//new File(datapath).getPath()
 		//instance.setDatapath(datapath);
 		
-		File imageFile = new File(testResourcesDataPath, "eurotext.png");
+		File imageFile = new File("C:\\tmp\\Untitled.png");
 		
 		String expResult = "The (quick) [brown] {fox} jumps!\nOver the $43,456.78 <lazy> #90 dog";
 		try {

@@ -4,6 +4,7 @@ from org.sikuli.basics import Settings
 from org.sikuli.script  import Location
 from org.sikuli.script import RunTime
 from org.sikuli.script import Pattern
+from net.sourceforge.tess4j import Word
 
 
 # # Prepare config
@@ -54,13 +55,11 @@ class SikuliWraper(object):
     def a_swipe_up(self):
         
         self.adbScreen.aSwipeUp()
-    def a_swipe_left(self):
-        
-        self.adbScreen.aSwipeLeft()
-    def a_swipe_right(self):
-        
-        self.adbScreen.aSwipeRight()
-        
+    
+    def a_swipe_left(self,step = "5"):
+        self.adbScreen.aSwipeLeft(int(step))
+    def a_swipe_right(self):        
+        self.adbScreen.aSwipeRight()      
         
     def a_swipe_down_from(self, image):
         
@@ -74,6 +73,18 @@ class SikuliWraper(object):
     def a_swipe_right_from(self, image):
         
         self.adbScreen.aSwipeRightFrom(image)
+    def exist_text(self,text,order ="1"):
+        word = self.adbScreen.findTextLine(text, int(order))
+        if(word == None):
+            return False
+        else:
+            return  True
+    def exist_word(self,text,order ="1"):
+        word = self.adbScreen.findWordLine(text, int(order))
+        if(word == None):
+            return False
+        else:
+            return  True
     def exist_image(self, image):
         
         if self.adbScreen.exists(image) != None:
@@ -86,6 +97,8 @@ class SikuliWraper(object):
             return True
         else:
             return False
+    def type_text(self,text):
+        self.adbScreen.exec1("input text", "'"+text+"'")
     def exist_image_collection(self, image):
         
         if self.adbScreen.existsCollection(image) != None:

@@ -5271,11 +5271,27 @@ public class Region {
 		} catch (FindFailed findFailed) {
 		}
 	}
+	public void aSwipeUp(int step) {
+		int midX = (int) (w / 2);
+		int swipeStep = (int) (h / step);
+		try {
+			aSwipe(new Location(midX, h - swipeStep), new Location(midX, swipeStep));
+		} catch (FindFailed findFailed) {
+		}
+	}
 
 	/**
 	 * EXPERIMENTAL: for Android over ADB
 	 */
 	public void aSwipeDown() {
+		int midX = (int) (w / 2);
+		int swipeStep = (int) (h / 5);
+		try {
+			aSwipe(new Location(midX, swipeStep), new Location(midX, h - swipeStep));
+		} catch (FindFailed findFailed) {
+		}
+	}
+	public void aSwipeDown(int step) {
 		int midX = (int) (w / 2);
 		int swipeStep = (int) (h / 5);
 		try {
@@ -5295,6 +5311,14 @@ public class Region {
 		} catch (FindFailed findFailed) {
 		}
 	}
+	public void aSwipeLeft(int step) {
+		int midY = (int) (h / 2);
+		int swipeStep = (int) (w / step);
+		try {
+			aSwipe(new Location(w - swipeStep, midY), new Location(swipeStep, midY));
+		} catch (FindFailed findFailed) {
+		}
+	}
 
 	/**
 	 * EXPERIMENTAL: for Android over ADB
@@ -5302,6 +5326,14 @@ public class Region {
 	public void aSwipeRight() {
 		int midY = (int) (h / 2);
 		int swipeStep = (int) (w / 5);
+		try {
+			aSwipe(new Location(swipeStep, midY), new Location(w - swipeStep, midY));
+		} catch (FindFailed findFailed) {
+		}
+	}
+	public void aSwipeRight(int step) {
+		int midY = (int) (h / 2);
+		int swipeStep = (int) (w / step);
 		try {
 			aSwipe(new Location(swipeStep, midY), new Location(w - swipeStep, midY));
 		} catch (FindFailed findFailed) {
