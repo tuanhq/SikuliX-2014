@@ -91,7 +91,7 @@ def rewrite_execute_file():
     
     fileBat = open("HUAutomation.bat","w")    
     fileBat.write("@echo off\n")
-    fileBat.write("jython -J-cp  ./LibExport/* -m robot.run HUAutomation.robot\n")     
+    fileBat.write("jython -J-cp  ./LibExport/* -m robot.run -x junit.xml --outputdir reports HUAutomation.robot\n")     
 
 if __name__ == "__main__":   
     for arg in sys.argv[1:]:
