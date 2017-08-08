@@ -3,7 +3,7 @@
     <configVersion>1.0</configVersion>
     <robotExecEnvironment path="C:\jython2.7.0\bin" interpreter="Jython"/>
     <relativeTo>PROJECT</relativeTo>
-    <referencedLibrary type="PYTHON" name="Libs.SikuliWraper" path="./../HUAutomation/Libs"/>
+    <referencedLibrary type="PYTHON" name="Libs.SikuliWraper" path="C:/Users/tuanhq/projects/java/SikuliX-2014/HUAutomation/Libs"/>
     <pythonpath/>
     <classpath>
         <path location="C:\Users\tuanhq\projects\java\repository\com\sikulix\sikulixapi\1.1.2-SNAPSHOT\sikulixapi-1.1.2-SNAPSHOT.jar"/>

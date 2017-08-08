@@ -1,8 +1,8 @@
 *** Setting ***
 Library    OperatingSystem
 Library    DateTime
-Library    Libs.SikuliWraper    4d000b1448084069    WITH NAME    AndroidMB
-Library    Libs.SikuliWraper    0123456789ABCDEF    WITH NAME    HU
+Library    Libs.SikuliWraper    android    4d000b1448084069    WITH NAME    AndroidMB
+Library    Libs.SikuliWraper    android    0123456789ABCDEF    WITH NAME    HU
 Library    Dialogs    
 
 *** Variables ***   

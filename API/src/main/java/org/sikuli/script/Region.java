@@ -24,6 +24,8 @@ import org.sikuli.basics.Debug;
 import org.sikuli.basics.Settings;
 import org.sikuli.util.PropertiesUtil;
 import org.sikuli.util.ScreenHighlighter;
+import org.sikuli.weston.WestonDevice;
+import org.sikuli.weston.WestonScreen;
 
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract1;
@@ -292,7 +294,7 @@ public class Region {
 			Debug.error("Region(%d,%d,%d,%d) outside any screen - subsequent actions might not work as expected", x, y,
 					w, h);
 		}
-		
+
 	}
 
 	private Location checkAndSetRemote(Location loc) {
@@ -524,11 +526,11 @@ public class Region {
 	 */
 	protected Region() {
 		this.rows = 0;
-		if(tesseractInstance==null) {
+		if (tesseractInstance == null) {
 			this.tesseractInstance = new Tesseract1();
 			this.tesseractInstance.setLanguage(Settings.tesseractLanguage);
 		}
-		
+
 	}
 
 	/**
@@ -3404,28 +3406,35 @@ public class Region {
 		// return FALSE if otherwise
 		// throws Exception if any unexpected error occurs
 		boolean repeat(double timeout) {
-			findTimeout = timeout;
-			int MaxTimePerScan = (int) (1000.0 / waitScanRate);
-			int timeoutMilli = (int) (timeout * 1000);
-			long begin_t = (new Date()).getTime();
-			do {
-				long before_find = (new Date()).getTime();
-				run();
-				if (ifSuccessful()) {
-					return true;
-				} else if (timeoutMilli < MaxTimePerScan || Settings.UseImageFinder) {
-					// instant return on first search failed if timeout very small or 0
-					// or when using new ImageFinder
-					return false;
-				}
-				long after_find = (new Date()).getTime();
-				if (after_find - before_find < MaxTimePerScan) {
-					getRobotForRegion().delay((int) (MaxTimePerScan - (after_find - before_find)));
-				} else {
-					getRobotForRegion().delay(10);
-				}
-			} while (begin_t + timeout * 1000 > (new Date()).getTime());
-			return false;
+			try {
+				findTimeout = timeout;
+				int MaxTimePerScan = (int) (1000.0 / waitScanRate);
+				int timeoutMilli = (int) (timeout * 1000);
+				long begin_t = (new Date()).getTime();
+				do {
+					long before_find = (new Date()).getTime();
+					run();
+					if (ifSuccessful()) {
+						return true;
+					} else if (timeoutMilli < MaxTimePerScan || Settings.UseImageFinder) {
+						// instant return on first search failed if timeout very small or 0
+						// or when using new ImageFinder
+						return false;
+					}
+					long after_find = (new Date()).getTime();
+					if (after_find - before_find < MaxTimePerScan) {
+						getRobotForRegion().delay((int) (MaxTimePerScan - (after_find - before_find)));
+					} else {
+						getRobotForRegion().delay(10);
+					}
+				} while (begin_t + timeout * 1000 > (new Date()).getTime());
+				return false;
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+				return false;
+			}
+			
 		}
 	}
 
@@ -4979,6 +4988,21 @@ public class Region {
 		return false;
 	}
 
+	private WestonDevice westonDevice;
+	private WestonScreen westonScreen;
+
+	private boolean isWeston() {
+		if (isOtherScreen()) {
+			IScreen scr = getScreen();
+			if (scr instanceof WestonScreen) {
+				westonScreen = (WestonScreen) scr;
+				westonDevice = westonScreen.getWestonDevice();
+				return true;
+			}
+		}
+		return false;
+	}
+
 	/**
 	 * EXPERIMENTAL: for Android over ADB
 	 *
@@ -4995,6 +5019,13 @@ public class Region {
 			if (loc != null) {
 				adbDevice.tap(loc.x, loc.y);
 				RunTime.pause(adbScreen.waitAfterAction);
+			}
+		}else if (isWeston() && westonDevice != null) {
+			System.err.println("DAY LA WESTION");
+			Location loc = getLocationFromTarget(target);
+			if (loc != null) {
+				westonDevice.tap(loc.x, loc.y);
+				RunTime.pause(westonDevice.waitAfterAction);
 			}
 		}
 	}
@@ -5027,40 +5058,58 @@ public class Region {
 	}
 
 	public <PFRML> void aTapEvent(PFRML target) throws FindFailed {
-		if (isAndroid() && adbDevice != null) {
+		if ((isAndroid() && adbDevice != null)||(isWeston() && westonDevice != null)) {
 			Location loc = getLocationFromTarget(target);
 			if (loc != null) {
 				eventTap(loc.x, loc.y);
-				RunTime.pause(adbScreen.waitAfterAction);
+				if(isAndroid()) {
+					RunTime.pause(adbScreen.waitAfterAction);
+				}else if (isWeston()) {
+					RunTime.pause(westonDevice.waitAfterAction);
+				}
+				
 			}
 		}
 	}
+
 	public <PFRML> void aTapEventExact(PFRML target) throws FindFailed {
 		try {
 			Settings.MinSimilarity = 0.99f;
-			if (isAndroid() && adbDevice != null) {
+			if ((isAndroid() && adbDevice != null)||(isWeston() && westonDevice != null)) {
 				Location loc = getLocationFromTarget(target);
 				if (loc != null) {
 					eventTap(loc.x, loc.y);
-					RunTime.pause(adbScreen.waitAfterAction);
+					if(isAndroid()) {
+						RunTime.pause(adbScreen.waitAfterAction);
+					}else if (isWeston()) {
+						RunTime.pause(westonDevice.waitAfterAction);
+					}
 				}
 			}
 		} finally {
 			// TODO: handle finally clause
 			Settings.MinSimilarity = 0.7f;
 		}
-		
+
 	}
 
 	// execute using event in android tuanhq
 
-	private void eventTap(int x, int y) {
+	private void eventTap(int x, int y) {		
 		try {
 
-			String executeCommand = PropertiesUtil.getProperties("sendTapEvent");
-			executeCommand = executeCommand.replaceAll("XXX", Integer.toString(x));
-			executeCommand = executeCommand.replaceAll("YYY", Integer.toString(y));
-			adbDevice.getDevice().executeShell(executeCommand);
+			if (isAndroid() && adbDevice != null) {
+				String executeCommand = PropertiesUtil.getProperties("sendTapEvent");
+				executeCommand = executeCommand.replaceAll("XXX", Integer.toString(x));
+				executeCommand = executeCommand.replaceAll("YYY", Integer.toString(y));
+				adbDevice.getDevice().executeShell(executeCommand);
+			}else if (isWeston() && westonDevice!=null) {
+				String executeCommand = PropertiesUtil.getProperties("westonTap");
+				executeCommand = executeCommand.replaceAll("XXX", Integer.toString(x));
+				executeCommand = executeCommand.replaceAll("YYY", Integer.toString(y));
+				westonDevice.exeCmd(executeCommand);
+			} 
+			
 		} catch (IOException | JadbException e) {
 			log(-1, "tap: %s", e);
 		}
@@ -5075,22 +5124,29 @@ public class Region {
 			}
 		}
 	}
-	
-	public  void eventPressLocation(int x,int y) {
+
+	public void eventPressLocation(int x, int y) {
 		if (isAndroid() && adbDevice != null) {
-			
-				eventPress(x, y);
-				RunTime.pause(adbScreen.waitAfterAction);
+
+			eventPress(x, y);
+			RunTime.pause(adbScreen.waitAfterAction);
 		}
 	}
 
 	private void eventPress(int x, int y) {
 		try {
-			String executeCommand = PropertiesUtil.getProperties("sendPressEvent");
-			
-			executeCommand = executeCommand.replaceAll("XXX", Integer.toString(x));
-			executeCommand = executeCommand.replaceAll("YYY", Integer.toString(y));			
-			adbDevice.getDevice().executeShell(executeCommand);
+			if (isAndroid() && adbDevice != null) {
+				String executeCommand = PropertiesUtil.getProperties("sendPressEvent");
+				executeCommand = executeCommand.replaceAll("XXX", Integer.toString(x));
+				executeCommand = executeCommand.replaceAll("YYY", Integer.toString(y));
+				adbDevice.getDevice().executeShell(executeCommand);
+
+			} else if (isWeston() && westonDevice != null) {
+				String executeCommand = PropertiesUtil.getProperties("westonPress");
+				executeCommand = executeCommand.replaceAll("XXX", Integer.toString(x));
+				executeCommand = executeCommand.replaceAll("YYY", Integer.toString(y));
+				westonDevice.exeCmd(executeCommand);
+			}
 		} catch (IOException | JadbException e) {
 			log(-1, "tap: %s", e);
 		}
@@ -5108,20 +5164,44 @@ public class Region {
 		}
 
 	}
+	private void eventRelease(int x, int y) {
+		if (isWeston() && westonDevice != null) {
+			try {
+				String executeCommand = PropertiesUtil.getProperties("westonRelease");
+				executeCommand = executeCommand.replaceAll("XXX", Integer.toString(x));
+				executeCommand = executeCommand.replaceAll("YYY", Integer.toString(y));
+				westonDevice.exeCmd(executeCommand);
+			} catch (Exception  e) {
+				e.printStackTrace();
+			}
 
-	public <PFRML> void eventLongPress(PFRML target, long miliseconds) throws FindFailed {
-
-		eventPress(target);
-		try {
-			Thread.sleep(miliseconds);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-		eventRelease();
 
 	}
-	public  void eventLongPress(int x, int y, long miliseconds) throws FindFailed {
+
+	public <PFRML> void eventLongPress(PFRML target, long miliseconds) throws FindFailed {
+		if ((isAndroid() && adbDevice != null)||(isWeston() && westonDevice != null)) {
+			Location loc = getLocationFromTarget(target);
+			eventPress(loc.x,loc.y);
+			try {
+				Thread.sleep(miliseconds);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if(isAndroid()&&adbDevice != null) {
+				eventRelease();
+			}else if (isWeston() && westonDevice !=null) {
+				eventRelease(x,y);
+			}
+			
+		}
+			
+		
+
+	}
+
+	public void eventLongPress(int x, int y, long miliseconds) throws FindFailed {
 
 		eventPressLocation(x, y);
 		try {
@@ -5130,7 +5210,12 @@ public class Region {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		eventRelease();
+		if(isWeston()&& westonDevice !=null) {
+			eventRelease(x,y);
+		}else if (isAndroid() && adbDevice!=null) {
+			eventRelease();
+		}
+		
 
 	}
 
@@ -5154,6 +5239,9 @@ public class Region {
 		if (isAndroid() && adbDevice != null) {
 			adbDevice.tap(x, y);
 			RunTime.pause(adbScreen.waitAfterAction);
+		} else if (isWeston() && westonDevice != null) {
+			westonDevice.tap(x, y);
+			RunTime.pause(westonDevice.waitAfterAction);
 		}
 	}
 
@@ -5194,12 +5282,18 @@ public class Region {
 	 *             image not found
 	 */
 	public <PFRML> void aSwipe(PFRML from, PFRML to) throws FindFailed {
-		if (isAndroid() && adbDevice != null) {
+		if ((isAndroid() && adbDevice != null) || (isWeston() && westonDevice != null)) {
 			Location locFrom = getLocationFromTarget(from);
 			Location locTo = getLocationFromTarget(to);
 			if (locFrom != null && locTo != null) {
-				adbDevice.swipe(locFrom.x, locFrom.y, locTo.x, locTo.y);
-				RunTime.pause(adbScreen.waitAfterAction);
+				if (isAndroid()) {
+					adbDevice.swipe(locFrom.x, locFrom.y, locTo.x, locTo.y);
+					RunTime.pause(adbScreen.waitAfterAction);
+				} else if (isWeston()) {
+					westonDevice.swipe(locFrom.x, locFrom.y, locTo.x, locTo.y);
+					RunTime.pause(westonDevice.waitAfterAction);
+				}
+
 			}
 		}
 	}
@@ -5220,19 +5314,19 @@ public class Region {
 	public <PFRML> void aSwipeRightFrom(PFRML from) throws FindFailed {
 		aSwipeFrom(from, Constant.Directions.RIGHT);
 	}
-	
+
 	public void aSwipeDownFromTop() throws FindFailed {
-		aSwipeFrom(new Location(x/2,0),Constant.Directions.DOWN);
+		aSwipeFrom(new Location(x / 2, 0), Constant.Directions.DOWN);
 	}
+
 	public <PFRML> void aSwipeFrom(PFRML from, Constant.Directions direct) throws FindFailed {
-		if (isAndroid() && adbDevice != null) {
+		if ((isAndroid() && adbDevice != null) || (isWeston() && westonDevice != null)) {
 			Location locFrom = null;
-			if(from instanceof Location) {
-				locFrom = (Location)from;
-			}else {
+			if (from instanceof Location) {
+				locFrom = (Location) from;
+			} else {
 				locFrom = getLocationFromTarget(from);
 			}
-			 
 
 			if (locFrom != null) {
 				int swipeStepX, swipeSTepY;
@@ -5252,9 +5346,13 @@ public class Region {
 					swipeStepX = locFrom.x - w / 4;
 					swipeSTepY = locFrom.y;
 				}
-				adbDevice.swipe(locFrom.x, locFrom.y, swipeStepX, swipeSTepY);
-
-				RunTime.pause(adbScreen.waitAfterAction);
+				if (isAndroid()) {
+					adbDevice.swipe(locFrom.x, locFrom.y, swipeStepX, swipeSTepY);
+					RunTime.pause(adbScreen.waitAfterAction);
+				} else if (isWeston()) {
+					westonDevice.swipe(locFrom.x, locFrom.y, swipeStepX, swipeSTepY);
+					RunTime.pause(westonDevice.waitAfterAction);
+				}
 
 			}
 		}
@@ -5271,6 +5369,7 @@ public class Region {
 		} catch (FindFailed findFailed) {
 		}
 	}
+
 	public void aSwipeUp(int step) {
 		int midX = (int) (w / 2);
 		int swipeStep = (int) (h / step);
@@ -5291,6 +5390,7 @@ public class Region {
 		} catch (FindFailed findFailed) {
 		}
 	}
+
 	public void aSwipeDown(int step) {
 		int midX = (int) (w / 2);
 		int swipeStep = (int) (h / 5);
@@ -5311,6 +5411,7 @@ public class Region {
 		} catch (FindFailed findFailed) {
 		}
 	}
+
 	public void aSwipeLeft(int step) {
 		int midY = (int) (h / 2);
 		int swipeStep = (int) (w / step);
@@ -5331,6 +5432,7 @@ public class Region {
 		} catch (FindFailed findFailed) {
 		}
 	}
+
 	public void aSwipeRight(int step) {
 		int midY = (int) (h / 2);
 		int swipeStep = (int) (w / step);
@@ -5424,37 +5526,40 @@ public class Region {
 	}
 
 	// find text using tess4j tuanhq
-	public Word findTextLine(String text,int order) {
-		return findText(text, TessPageIteratorLevel.RIL_TEXTLINE,order);
-	}
-	public Word findWordLine(String text,int order) {
-		return findText(text, TessPageIteratorLevel.RIL_WORD,order);
+	public Word findTextLine(String text, int order) {
+		return findText(text, TessPageIteratorLevel.RIL_TEXTLINE, order);
 	}
 
-	public Word findText(String text, int pageIteratorLevel,int order) {
+	public Word findWordLine(String text, int order) {
+		return findText(text, TessPageIteratorLevel.RIL_WORD, order);
+	}
+
+	public Word findText(String text, int pageIteratorLevel, int order) {
 		BufferedImage bi = this.getScreen().capture().getImage();
 		List<Word> listWord = tesseractInstance.getWords(bi, pageIteratorLevel);
 		int current = 1;
 		for (Word word : listWord) {
-			System.err.println(word.getText());
+			System.out.println(word.getText());
 			if (word.getText() != null && word.getText().toLowerCase().contains(text.toLowerCase())
 					&& word.getConfidence() >= Settings.MinSimilarity)
-				 if (current >= order) {
-					 return word;
-				 }else {
-					 current ++;
-					 continue;
-				 }
-				
+				if (current >= order) {
+					return word;
+				} else {
+					current++;
+					continue;
+				}
+
 		}
 		return null;
 	}
+
 	public Location getLocationByText(String text) {
-		return getLocationByText(text,1);
+		return getLocationByText(text, 1);
 	}
-	public Location getLocationByText(String text,int order) {
+
+	public Location getLocationByText(String text, int order) {
 		Location loc = null;
-		Word word = findTextLine(text,order);
+		Word word = findTextLine(text, order);
 		if (word != null) {
 			Rectangle rec = word.getBoundingBox();
 			double x = rec.getX() + rec.getWidth() / 2;
@@ -5465,82 +5570,102 @@ public class Region {
 		return loc;
 
 	}
-	
+
 	public Match getMatchByText(String text) {
-		return getMatchByText(text,1,TessPageIteratorLevel.RIL_TEXTLINE);
+		return getMatchByText(text, 1, TessPageIteratorLevel.RIL_TEXTLINE);
 	}
-	public Match getMatchByText(String text,int order,int mode) {
+
+	public Match getMatchByText(String text, int order, int mode) {
 
 		Match m = null;
-		Word word = findText(text,mode,order);
+		Word word = findText(text, mode, order);
 		if (word != null) {
-			
-			Rectangle rec = word.getBoundingBox();			
-			m = new Match((int)(this.x + rec.getX())-2, (int)(this.y + rec.getY())-2,(int) rec.getWidth()+2,(int)rec.getHeight()+2,
-		              word.getConfidence(), this.getScreen(), word.getText());
+
+			Rectangle rec = word.getBoundingBox();
+			m = new Match((int) (this.x + rec.getX()) - 2, (int) (this.y + rec.getY()) - 2, (int) rec.getWidth() + 2,
+					(int) rec.getHeight() + 2, word.getConfidence(), this.getScreen(), word.getText());
 		}
 		return m;
 
-	
 	}
+
 	public void aTapTextEvent(String text) {
-		aTapText(text,1,TapType.EVENT_TAP);
+		aTapText(text, 1, TapType.EVENT_TAP);
 	}
+
 	public void aTapWordEvent(String text) {
-		aTapWord(text,1,TapType.EVENT_TAP);
+		aTapWord(text, 1, TapType.EVENT_TAP);
 	}
-	
-	
+
 	public void aTapText(String text) {
-		aTapText(text,1,TapType.SHELL_TAP);
+		if (isAndroid()) {
+			aTapText(text, 1, TapType.SHELL_TAP);
+		} else if (isWeston()) {
+			aTapText(text, 1, TapType.WESTON_CLICK);
+		}
 	}
+
 	public void aTapWord(String text) {
-		aTapWord(text,1,TapType.SHELL_TAP);
-	}
-	public void aTapText(String text,int order,TapType tapType) {
+		if (isAndroid()) {
+			aTapWord(text, 1, TapType.SHELL_TAP);
+		} else if (isWeston()) {
+			aTapWord(text, 1, TapType.WESTON_CLICK);
+		} else {
 
-		if (isAndroid() && adbDevice != null) {
-			Word word = findTextLine(text,order);
+		}
+
+	}
+
+	public void aTapText(String text, int order, TapType tapType) {
+
+		if ((isAndroid() && adbDevice != null) || (isWeston() && westonDevice != null)) {
+			Word word = findTextLine(text, order);
 			if (word != null) {
 				Rectangle rec = word.getBoundingBox();
 				double x = rec.getX() + rec.getWidth() / 2;
 				double y = rec.getY() + rec.getHeight() / 2;
-				if(TapType.SHELL_TAP.equals(tapType)) {
+				if (TapType.SHELL_TAP.equals(tapType)) {
 					adbDevice.tap((int) x, (int) y);
-				}else if(TapType.EVENT_TAP.equals(tapType)) {
+					RunTime.pause(adbScreen.waitAfterAction);
+				} else if (TapType.EVENT_TAP.equals(tapType)) {
 					eventTap((int) x, (int) y);
+				} else if (TapType.WESTON_CLICK.equals(tapType)) {
+					westonDevice.tap((int) x, (int) y);
+					RunTime.pause(westonDevice.waitAfterAction);
 				}
-				
-				RunTime.pause(adbScreen.waitAfterAction);
 
 			}
 
 		}
 
 	}
-	
-	public void aTapWord(String text,int order,TapType tapType) {
 
-		if (isAndroid() && adbDevice != null) {
-			Word word = findWordLine(text,order);
+	public void aTapWord(String text, int order, TapType tapType) {
+
+		if ((isAndroid() && adbDevice != null) || (isWeston() && westonDevice != null)) {
+			Word word = findWordLine(text, order);
 			if (word != null) {
 				Rectangle rec = word.getBoundingBox();
 				double x = rec.getX() + rec.getWidth() / 2;
 				double y = rec.getY() + rec.getHeight() / 2;
-				if(TapType.SHELL_TAP.equals(tapType)) {
+				if (TapType.SHELL_TAP.equals(tapType)) {
 					adbDevice.tap((int) x, (int) y);
-				}else if(TapType.EVENT_TAP.equals(tapType)) {
+					RunTime.pause(adbScreen.waitAfterAction);
+				} else if (TapType.EVENT_TAP.equals(tapType)) {
 					eventTap((int) x, (int) y);
+				} else if (TapType.WESTON_CLICK.equals(tapType)) {
+					westonDevice.tap((int) x, (int) y);
+					RunTime.pause(westonDevice.waitAfterAction);
 				}
-				RunTime.pause(adbScreen.waitAfterAction);
 
 			}
 
 		}
 
 	}
-	public enum TapType{
-		EVENT_TAP, SHELL_TAP
+
+	public static enum  TapType {
+		EVENT_TAP, SHELL_TAP, WESTON_CLICK
 	}
 
 }

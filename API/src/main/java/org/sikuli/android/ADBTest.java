@@ -18,6 +18,8 @@ import org.sikuli.script.RunTime;
 import org.sikuli.script.Screen;
 import org.sikuli.script.ScreenImage;
 import org.sikuli.script.Sikulix;
+import org.sikuli.weston.WestonDevice;
+import org.sikuli.weston.WestonScreen;
 
 import net.sourceforge.tess4j.ITessAPI.TessPageIteratorLevel;
 import net.sourceforge.tess4j.ITesseract;
@@ -55,9 +57,30 @@ public class ADBTest {
 		 Settings.OcrTextRead = true;
 		 Settings.OcrTextSearch = true;
 		// Screen scr = new Screen();
-		 ADBScreen adbS = new ADBScreen("0123456789ABCDEF");
-		 adbS.capture().save("C:\\tmp", "ANDROI");
-		 adbS.aTapWord("Connection");
+		
+//		 adbS.capture().save("C:\\tmp", "ANDROI");
+//		 adbS.aTapWord("Connection");
+		 WestonScreen westonScreen = new WestonScreen("192.168.1.2", 22, "root", "");
+		 try {
+			// ADBScreen adbS = new ADBScreen("4b133ee0e814924e");
+			// adbS.aTap("C:\\tmp\\trang\\mem.jpg");
+			//westonScreen.aTap2("C:\\tmp\\trang\\Untitled.jpg"); 
+			Thread.sleep(1000);
+			//westonScreen.aTapWord("Setup");
+			westonScreen.aTap("C:\\tmp\\trang\\setup.jpg");
+			 
+			//westonScreen.aTap2("C:\\tmp\\trang\\KBS.jpg");
+			 //System.err.println(System.getProperty("java.io.tmpdir"));
+			// westonScreen.capture();
+			// westonScreen.a
+			// westonScreen.aTapWordWeston("Reception");
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			westonScreen.getWestonDevice().release();
+		}
 		 
 		// Match m1 = adbS.getMatchByText("Clock",1,TessPageIteratorLevel.RIL_WORD);
 		// m1.saveScreenCapture("C:\\tmp", "HILLO");
