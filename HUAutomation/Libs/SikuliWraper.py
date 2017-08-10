@@ -197,7 +197,7 @@ class SikuliWraper(object):
             else:
                 continue
     def release_device(self):        
-        self.deviceScreen.release()                               
+        self.deviceScreen.release()                           
                 
 class LocationPy:
     def __init__(self, x, y):

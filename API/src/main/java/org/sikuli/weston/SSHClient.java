@@ -46,7 +46,15 @@ public class SSHClient {
 	}
 
 	public ExecuteOutput execCmd(String cmd) {
-		synchronized(session) {			
+		synchronized(session) {	
+			if(!session.isConnected()) {
+				try {
+					session.connect();
+				} catch (JSchException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		
 		Channel channel = null;
 		try {
