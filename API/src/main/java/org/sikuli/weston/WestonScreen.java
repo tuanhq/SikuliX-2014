@@ -21,6 +21,9 @@ public class WestonScreen extends Region implements IScreen {
 		super();
 		setOtherScreen(this);
 		westonDevice = WestonDevice.getInstance(host, port, user, password);
+		Rectangle bounds = westonDevice.getBound();
+	     w = bounds.width;
+	     h = bounds.height;
 	}
 
 	public WestonDevice getWestonDevice() {
