@@ -57,6 +57,8 @@ class SikuliWraper(object):
     def a_swipe(self, image1, image2):
         
         self.deviceScreen.aSwipe(image1, image2)
+    def a_swipe_by_location(self, x1, y1, x2, y2):        
+        self.deviceScreen.aSwipe(int(x1), int(y1), int(x2), int(y2))
     def a_swipe_down_from_top(self):
         self.deviceScreen.aSwipeDownFromTop()
     def a_swipe_down(self):

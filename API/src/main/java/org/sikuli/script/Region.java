@@ -5299,6 +5299,21 @@ public class Region {
 			}
 		}
 	}
+	
+	
+	public <PFRML> void aSwipe(int x1, int y1, int x2, int y2) throws FindFailed {
+		if ((isAndroid() && adbDevice != null) || (isWeston() && westonDevice != null)) {
+			
+				if (isAndroid()) {
+					adbDevice.swipe(x1, y1, x2, y2);
+					RunTime.pause(adbScreen.waitAfterAction);
+				} else if (isWeston()) {
+					westonDevice.swipe(x1, y1, x2, y2);
+					RunTime.pause(westonDevice.waitAfterAction);
+				}
+
+		}
+	}
 
 	// add swipe from target tuanhq
 	public <PFRML> void aSwipeUpFrom(PFRML from) throws FindFailed {
