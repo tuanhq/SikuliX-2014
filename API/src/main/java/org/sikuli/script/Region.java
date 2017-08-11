@@ -5127,9 +5127,11 @@ public class Region {
 
 	public void eventPressLocation(int x, int y) {
 		if (isAndroid() && adbDevice != null) {
-
 			eventPress(x, y);
 			RunTime.pause(adbScreen.waitAfterAction);
+		}else if(isWeston() && westonDevice !=null) {
+			eventPress(x, y);
+			RunTime.pause(westonDevice.waitAfterAction);
 		}
 	}
 
