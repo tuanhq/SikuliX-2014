@@ -144,7 +144,7 @@ class SikuliWraper(object):
 
     def event_long_press(self, image, milis):
         
-        self.deviceScreen.eventLongPress(image, milis)
+        self.deviceScreen.eventLongPress(image, int(milis))
         
     def tap_colllection(self, collections):
         
